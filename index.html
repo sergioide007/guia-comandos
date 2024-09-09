@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Interactiva de Comandos y Tips para Desarrolladores</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e5ddd5;
+            color: #333;
+            overflow: hidden;
+            position: relative;
+            user-select: none;
+        }
+        #search-container {
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            z-index: 10;
+            width: 100%;
+            max-width: 600px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        #search {
+            width: 90%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        .not-found {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #ff0000;
+        }
+        .not-found a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .not-found a:hover {
+            text-decoration: underline;
+        }
+        .container-wrapper {
+            position: relative;
+            height: calc(100vh - 70px); /* Ajusta la altura según la altura del buscador */
+            margin-top: 70px; /* Ajusta según la altura del buscador */
+            overflow: hidden;
+        }
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+            border-right: 10px solid #ccc; /* Para la barra de desplazamiento */
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .command {
+            background-color: #ffffff;
+            color: #333;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .command:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .command pre {
+            margin: 0;
+            font-size: 14px;
+            white-space: pre-wrap;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .copy-button {
+            background-color: #25d366;
+            border: none;
+            color: white;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: background-color 0.3s;
+            text-align: center;
+        }
+        .copy-button:hover {
+            background-color: #1ebc74;
+        }
+        .tooltip {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            max-width: 300px;
+            pointer-events: none;
+            z-index: 1000;
+            transition: opacity 0.3s, transform 0.3s;
+            opacity: 0;
+            transform: translate(-50%, -10px);
+            margin-top: 10px;
+        }
+        .tooltip.visible {
+            opacity: 1;
+            transform: translate(-50%, -20px);
+        }
+        .tooltip-content {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        #theme {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .rain {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .rain div {
+            position: absolute;
+            width: 2px;
+            height: 10px;
+            background: #00BFFF;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="search-container">
+        <input type="text" id="search" placeholder="Buscar comandos...">
+        <div class="not-found" id="not-found-message" style="display: none;">
+            No se encontraron comandos. ¿Quieres buscar en <a href="https://www.google.com" target="_blank">Google</a>?
+        </div>
+    </div>
+    <div class="container-wrapper">
+        <div class="container" id="content-container"></div>
+    </div>
+    <div class="tooltip" id="tooltip">
+        <div class="tooltip-content" id="tooltip-content"></div>
+    </div>
+    <select id="theme">
+        <option value="matrix">Matrix</option>
+        <option value="mario">Mario Bros</option>
+        <option value="space">Espacio</option>
+    </select>
+    <div class="rain"></div>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script>
+        // Función para normalizar texto eliminando tildes y convirtiendo a minúsculas
+        function normalizeText(text) {
+            return text.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase();
+        }
+
+        async function loadCommands() {
+            try {
+                const response = await fetch('commands.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                const data = await response.json();
+                processCommands(data);
+            } catch (error) {
+                console.error('Error al cargar los comandos:', error);
+            }
+        }
+
+        function processCommands(data) {
+            const container = d3.select('#content-container');
+            container.selectAll('*').remove();  // Limpiar el contenedor antes de agregar nuevos comandos
+
+            data.sections.forEach((section) => {
+                const sectionDiv = container.append('div')
+                    .attr('class', 'section')
+                    .attr('id', section.section.replace(/\s+/g, '-').toLowerCase())
+                    .style('margin-bottom', '20px');
+
+                section.items.forEach((item) => {
+                    const commandDiv = sectionDiv.append('div')
+                        .attr('class', 'command')
+                        .attr('id', item.id)
+                        .html(`
+                            <div>
+                                <strong>${item.emoji}</strong>
+                                <pre>${item.command}</pre>
+                                <button class="copy-button" data-command="${item.command}">Copiar Comando</button>
+                            </div>
+                        `)
+                        .attr('data-id', item.id || '')
+                        .attr('data-details', item.details || '')
+                        .attr('data-emoji', item.emoji || '');
+
+                    commandDiv.on('mouseover', function(event) {
+                        const tooltip = d3.select('#tooltip');
+                        d3.select('#tooltip-content').html(`
+                            <div>
+                                <pre>${section.section}</pre>
+                                <strong>${item.emoji}</strong>
+                                <pre>${item.command}</pre>
+                                <div class="details">${item.details}</div>
+                            </div>
+                        `);
+                        const tooltipWidth = tooltip.node().offsetWidth;
+                        const tooltipHeight = tooltip.node().offsetHeight;
+                        const tooltipX = Math.min(event.pageX, window.innerWidth - tooltipWidth - 20);
+                        const tooltipY = Math.max(event.pageY - tooltipHeight - 20, 10);
+                        tooltip.style('left', `${tooltipX}px`)
+                            .style('top', `${tooltipY}px`)
+                            .classed('visible', true);
+                    })
+                    .on('mouseout', function() {
+                        d3.select('#tooltip').classed('visible', false);
+                    });
+                });
+            });
+        }
+
+        function searchCommands(searchTerm) {
+            const normalizedSearchTerm = normalizeText(searchTerm);
+            let found = false;
+
+            d3.selectAll('.command').each(function() {
+                const commandDiv = d3.select(this);
+                const commandText = normalizeText(commandDiv.select('pre').text());
+                const idText = normalizeText(commandDiv.attr('data-id') || '');
+                const detailsText = normalizeText(commandDiv.attr('data-details') || '');
+                const emojiText = normalizeText(commandDiv.attr('data-emoji') || '');
+
+                if (
+                    commandText.includes(normalizedSearchTerm) ||
+                    idText.includes(normalizedSearchTerm) ||
+                    detailsText.includes(normalizedSearchTerm) ||
+                    emojiText.includes(normalizedSearchTerm)
+                ) {
+                    commandDiv.style('display', 'block');
+                    found = true;
+                } else {
+                    commandDiv.style('display', 'none');
+                }
+            });
+
+            const notFoundMessage = d3.select('#not-found-message');
+            notFoundMessage.style('display', found ? 'none' : 'block');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadCommands();
+
+            document.addEventListener('click', function(event) {
+                if (event.target.classList.contains('copy-button')) {
+                    const command = event.target.getAttribute('data-command');
+                    navigator.clipboard.writeText(command).then(() => {
+                        alert('Comando copiado al portapapeles.');
+                    }).catch(err => {
+                        alert('Error al copiar comando: ' + err);
+                    });
+                }
+            });
+
+            d3.select('#theme').on('change', function() {
+                const selectedTheme = this.value;
+                const themes = {
+                    matrix: {
+                        backgroundColor: '#000',
+                        rainColor: '#0F0'
+                    },
+                    mario: {
+                        backgroundColor: '#87CEEB',
+                        rainColor: '#FFD700'
+                    },
+                    space: {
+                        backgroundColor: '#001f3f',
+                        rainColor: '#00BFFF'
+                    }
+                };
+                const theme = themes[selectedTheme];
+                d3.select('body').style('background-color', theme.backgroundColor);
+                const rainContainer = d3.select('.rain');
+                rainContainer.selectAll('*').remove();
+                for (let i = 0; i < 100; i++) {
+                    rainContainer.append('div')
+                        .style('background', theme.rainColor)
+                        .style('animation-duration', `${Math.random() * 2 + 2}s`)
+                        .style('left', `${Math.random() * 100}vw`)
+                        .style('top', `${Math.random() * 100}vh`);
+                }
+            });
+
+            d3.select('#search').on('input', function() {
+                searchCommands(this.value);
+            });
+
+            // Navegación con las flechas del teclado
+            document.addEventListener('keydown', (event) => {
+                const container = document.getElementById('content-container');
+                const scrollStep = 50;
+                if (event.key === 'ArrowDown') {
+                    container.scrollTop += scrollStep;
+                } else if (event.key === 'ArrowUp') {
+                    container.scrollTop -= scrollStep;
+                } else if (event.key === 'Home') {
+                    container.scrollTop = 0;
+                } else if (event.key === 'End') {
+                    container.scrollTop = container.scrollHeight;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
