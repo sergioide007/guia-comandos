@@ -1,0 +1,3110 @@
+{
+    "sections": [
+        {
+            "section": "Comandos Básicos de Git",
+            "items": [
+                {
+                    "id": "git1",
+                    "command": "git init",
+                    "emoji": "🚀",
+                    "details": "Inicializa un nuevo repositorio Git vacío en el directorio actual."
+                },
+                {
+                    "id": "git2",
+                    "command": "git clone <url>",
+                    "emoji": "🔄",
+                    "details": "Crea una copia local de un repositorio remoto."
+                },
+                {
+                    "id": "git3",
+                    "command": "git add <archivo>",
+                    "emoji": "➕",
+                    "details": "Añade un archivo al área de preparación para el siguiente commit."
+                },
+                {
+                    "id": "git4",
+                    "command":"git commit -m 'mensaje'",
+                    "emoji": "✉️",
+                    "details": "Crea un nuevo commit con los archivos en el área de preparación y un mensaje."
+                },
+                {
+                    "id": "git5",
+                    "command": "git status",
+                    "emoji": "🔍",
+                    "details": "Muestra el estado del repositorio, incluyendo archivos modificados y cambios pendientes."
+                },
+                {
+                    "id": "git6",
+                    "command": "git branch",
+                    "emoji": "🌿",
+                    "details": "Lista todas las ramas en el repositorio. La rama actual está marcada con un asterisco."
+                },
+                {
+                    "id": "git7",
+                    "command": "git checkout <rama>",
+                    "emoji": "🔄",
+                    "details": "Cambia a la rama especificada."
+                },
+                {
+                    "id": "git8",
+                    "command": "git merge <rama>",
+                    "emoji": "🔗",
+                    "details": "Fusiona la rama especificada con la rama actual."
+                },
+                {
+                    "id": "git9",
+                    "command": "git remote -v",
+                    "emoji": "🌐",
+                    "details": "Muestra las URLs de los repositorios remotos asociados."
+                },
+                {
+                    "id": "git10",
+                    "command": "git pull",
+                    "emoji": "⬇️",
+                    "details": "Descarga y fusiona los cambios del repositorio remoto a la rama actual."
+                },
+                {
+                    "id": "git11",
+                    "command": "git push",
+                    "emoji": "⬆️",
+                    "details": "Sube los commits locales a la rama correspondiente en el repositorio remoto."
+                },
+                {
+                    "id": "git12",
+                    "command": "git log",
+                    "emoji": "📜",
+                    "details": "Muestra el historial de commits en la rama actual."
+                },
+                {
+                    "id": "git13",
+                    "command": "git reset --hard <commit>",
+                    "emoji": "🔄",
+                    "details": "Restaura el repositorio al estado del commit especificado, descartando cambios no confirmados."
+                },
+                {
+                    "id": "git14",
+                    "command": "git rebase <rama>",
+                    "emoji": "🔁",
+                    "details": "Reaplica commits de la rama actual sobre la base de la rama especificada."
+                },
+                {
+                    "id": "git15",
+                    "command": "git tag",
+                    "emoji": "🏷️",
+                    "details": "Crea una etiqueta (tag) en un commit específico."
+                },
+                {
+                    "id": "git16",
+                    "command":"git tag -a <etiqueta> -m 'mensaje'",
+                    "emoji": "📝",
+                    "details": "Crea una etiqueta anotada con un mensaje."
+                },
+                {
+                    "id": "git17",
+                    "command": "git tag -d <etiqueta>",
+                    "emoji": "❌",
+                    "details": "Elimina una etiqueta local."
+                },
+                {
+                    "id": "git18",
+                    "command": "git push origin <etiqueta>",
+                    "emoji": "⬆️",
+                    "details": "Envía una etiqueta específica al repositorio remoto."
+                },
+                {
+                    "id": "git19",
+                    "command": "git push origin --tags",
+                    "emoji": "⬆️",
+                    "details": "Envía todas las etiquetas locales al repositorio remoto."
+                },
+                {
+                    "id": "git20",
+                    "command": "git show <etiqueta>",
+                    "emoji": "📜",
+                    "details": "Muestra información sobre una etiqueta específica."
+                },
+                {
+                    "id": "git21",
+                    "command": "git tag -l",
+                    "emoji": "📋",
+                    "details": "Lista todas las etiquetas en el repositorio."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Avanzados de Git",
+            "items": [
+                {
+                    "id": "git22",
+                    "command": "git stash",
+                    "emoji": "📦",
+                    "details": "Guarda cambios temporales no confirmados para poder trabajar en otra cosa, y luego los restaura con `git stash apply`."
+                },
+                {
+                    "id": "git23",
+                    "command": "git stash pop",
+                    "emoji": "🔄",
+                    "details": "Aplica los cambios guardados en el stash más reciente y elimina el stash."
+                },
+                {
+                    "id": "git24",
+                    "command": "git cherry-pick <commit>",
+                    "emoji": "🍒",
+                    "details": "Aplica los cambios de un commit específico a la rama actual."
+                },
+                {
+                    "id": "git25",
+                    "command": "git revert <commit>",
+                    "emoji": "🔙",
+                    "details": "Crea un nuevo commit que revierte los cambios introducidos por el commit especificado."
+                },
+                {
+                    "id": "git26",
+                    "command": "git rebase -i <commit>",
+                    "emoji": "🔁",
+                    "details": "Permite reescribir el historial de commits de forma interactiva para editar, reordenar o combinar commits."
+                },
+                {
+                    "id": "git27",
+                    "command": "git reflog",
+                    "emoji": "🔍",
+                    "details": "Muestra un registro de los cambios en los punteros de referencia, útil para recuperar commits perdidos."
+                },
+                {
+                    "id": "git28",
+                    "command": "git reset --soft <commit>",
+                    "emoji": "🔧",
+                    "details": "Restaura el índice y el HEAD a un commit especificado, manteniendo los cambios en el área de preparación."
+                },
+                {
+                    "id": "git29",
+                    "command": "git reset --mixed <commit>",
+                    "emoji": "⚙️",
+                    "details": "Restaura el índice y el HEAD a un commit especificado, pero mantiene los cambios en el directorio de trabajo."
+                },
+                {
+                    "id": "git30",
+                    "command":"git filter-branch --tree-filter 'comando' HEAD",
+                    "emoji": "🔧",
+                    "details": "Reescribe el historial de commits para aplicar un comando a cada árbol de commit, útil para eliminar archivos grandes o sensibles."
+                },
+                {
+                    "id": "git31",
+                    "command": "git bisect start <bad> <good>",
+                    "emoji": "🔍",
+                    "details":"Inicia una búsqueda binaria para identificar el commit que introdujo un error entre dos commits conocidos como 'bueno' y 'malo'."
+                },
+                {
+                    "id": "git32",
+                    "command": "git submodule add <url> <ruta>",
+                    "emoji": "🔗",
+                    "details": "Añade un submódulo a tu repositorio, permitiendo incluir otros repositorios dentro del principal."
+                },
+                {
+                    "id": "git33",
+                    "command": "git submodule update --remote",
+                    "emoji": "🔄",
+                    "details": "Actualiza todos los submódulos a la última versión de la rama especificada."
+                },
+                {
+                    "id": "git34",
+                    "command": "git gc --aggressive",
+                    "emoji": "🧹",
+                    "details": "Realiza una recolección de basura agresiva para optimizar el repositorio, eliminando archivos y commits innecesarios."
+                },
+                {
+                    "id": "git35",
+                    "command": "git config --global alias.co checkout",
+                    "emoji": "🔧",
+                    "details": "Crea un alias global para un comando Git, en este caso, `git co` se convierte en un alias para `git checkout`."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Básicos de Linux",
+            "items": [
+                {
+                    "id": "linux1",
+                    "command": "ls",
+                    "emoji": "📂",
+                    "details": "Lista el contenido de un directorio."
+                },
+                {
+                    "id": "linux2",
+                    "command": "cd <directorio>",
+                    "emoji": "📁",
+                    "details": "Cambia al directorio especificado."
+                },
+                {
+                    "id": "linux3",
+                    "command": "pwd",
+                    "emoji": "📍",
+                    "details": "Muestra el directorio de trabajo actual."
+                },
+                {
+                    "id": "linux4",
+                    "command": "cp <origen> <destino>",
+                    "emoji": "📋",
+                    "details": "Copia archivos o directorios."
+                },
+                {
+                    "id": "linux5",
+                    "command": "mv <origen> <destino>",
+                    "emoji": "↔️",
+                    "details": "Mueve o renombra archivos o directorios."
+                },
+                {
+                    "id": "linux6",
+                    "command": "rm <archivo>",
+                    "emoji": "🗑️",
+                    "details": "Elimina archivos o directorios."
+                },
+                {
+                    "id": "linux7",
+                    "command": "touch <archivo>",
+                    "emoji": "🖐️",
+                    "details": "Crea un archivo vacío o actualiza la fecha de acceso de un archivo."
+                },
+                {
+                    "id": "linux8",
+                    "command": "mkdir <directorio>",
+                    "emoji": "📂",
+                    "details": "Crea un nuevo directorio."
+                },
+                {
+                    "id": "linux9",
+                    "command": "rmdir <directorio>",
+                    "emoji": "🚪",
+                    "details": "Elimina un directorio vacío."
+                },
+                {
+                    "id": "linux10",
+                    "command": "man <comando>",
+                    "emoji": "📖",
+                    "details": "Muestra el manual de un comando."
+                },
+                {
+                    "id": "linux11",
+                    "command": "grep <patrón> <archivo>",
+                    "emoji": "🔍",
+                    "details": "Busca un patrón en el contenido de un archivo."
+                },
+                {
+                    "id": "linux12",
+                    "command": "find <directorio> -name <nombre>",
+                    "emoji": "🔎",
+                    "details": "Busca archivos y directorios por nombre."
+                },
+                {
+                    "id": "linux13",
+                    "command": "cat <archivo>",
+                    "emoji": "📜",
+                    "details": "Muestra el contenido de un archivo."
+                },
+                {
+                    "id": "linux14",
+                    "command": "less <archivo>",
+                    "emoji": "📄",
+                    "details": "Muestra el contenido de un archivo de manera paginada."
+                },
+                {
+                    "id": "linux15",
+                    "command": "head <archivo>",
+                    "emoji": "📘",
+                    "details": "Muestra las primeras líneas de un archivo."
+                },
+                {
+                    "id": "linux16",
+                    "command": "tail <archivo>",
+                    "emoji": "📙",
+                    "details": "Muestra las últimas líneas de un archivo."
+                },
+                {
+                    "id": "linux17",
+                    "command": "chmod <permisos> <archivo>",
+                    "emoji": "🔑",
+                    "details": "Cambia los permisos de un archivo o directorio."
+                },
+                {
+                    "id": "linux18",
+                    "command": "chown <usuario>:<grupo> <archivo>",
+                    "emoji": "👤",
+                    "details": "Cambia el propietario y grupo de un archivo o directorio."
+                },
+                {
+                    "id": "linux19",
+                    "command": "ps",
+                    "emoji": "🖥️",
+                    "details": "Muestra los procesos en ejecución."
+                },
+                {
+                    "id": "linux20",
+                    "command": "top",
+                    "emoji": "📊",
+                    "details": "Muestra los procesos en ejecución y su uso de recursos en tiempo real."
+                },
+                {
+                    "id": "linux21",
+                    "command": "kill <PID>",
+                    "emoji": "🛑",
+                    "details": "Envía una señal a un proceso, normalmente para terminarlo."
+                },
+                {
+                    "id": "linux22",
+                    "command": "df",
+                    "emoji": "💾",
+                    "details": "Muestra el uso del espacio en disco."
+                },
+                {
+                    "id": "linux23",
+                    "command": "du",
+                    "emoji": "📊",
+                    "details": "Muestra el uso del espacio en disco de archivos y directorios."
+                },
+                {
+                    "id": "linux24",
+                    "command": "free",
+                    "emoji": "💡",
+                    "details": "Muestra la cantidad de memoria libre y usada en el sistema."
+                },
+                {
+                    "id": "linux25",
+                    "command": "uptime",
+                    "emoji": "⏳",
+                    "details": "Muestra el tiempo que el sistema ha estado en funcionamiento."
+                },
+                {
+                    "id": "linux26",
+                    "command": "last",
+                    "emoji": "📜",
+                    "details": "Muestra el historial de inicios de sesión."
+                },
+                {
+                    "id": "linux27",
+                    "command": "ifconfig",
+                    "emoji": "🌐",
+                    "details": "Muestra o configura las interfaces de red del sistema."
+                },
+                {
+                    "id": "linux28",
+                    "command": "iwconfig",
+                    "emoji": "📶",
+                    "details": "Muestra o configura las interfaces de red inalámbrica."
+                },
+                {
+                    "id": "linux29",
+                    "command": "ping <host>",
+                    "emoji": "📡",
+                    "details": "Envía paquetes ICMP ECHO_REQUEST a un host para comprobar la conectividad."
+                },
+                {
+                    "id": "linux30",
+                    "command": "traceroute <host>",
+                    "emoji": "🚚",
+                    "details": "Muestra la ruta de paquetes hasta un host de destino."
+                },
+                {
+                    "id": "linux31",
+                    "command": "ssh <usuario>@<host>",
+                    "emoji": "🔐",
+                    "details": "Conecta a un host remoto usando el protocolo SSH."
+                },
+                {
+                    "id": "linux32",
+                    "command": "scp <archivo> <usuario>@<host>:<ruta>",
+                    "emoji": "📤",
+                    "details": "Copia archivos entre hosts usando el protocolo SCP."
+                },
+                {
+                    "id": "linux33",
+                    "command": "tar -cvf <archivo>.tar <directorio>",
+                    "emoji": "📦",
+                    "details": "Crea un archivo tar a partir de un directorio."
+                },
+                {
+                    "id": "linux34",
+                    "command": "tar -xvf <archivo>.tar",
+                    "emoji": "📂",
+                    "details": "Extrae el contenido de un archivo tar."
+                },
+                {
+                    "id": "linux35",
+                    "command": "gzip <archivo>",
+                    "emoji": "🗜️",
+                    "details": "Comprime un archivo usando gzip."
+                },
+                {
+                    "id": "linux36",
+                    "command": "gunzip <archivo>.gz",
+                    "emoji": "📦",
+                    "details": "Descomprime un archivo gzip."
+                },
+                {
+                    "id": "linux37",
+                    "command": "echo <mensaje>",
+                    "emoji": "💬",
+                    "details": "Muestra un mensaje en la pantalla."
+                },
+                {
+                    "id": "linux38",
+                    "command": "history",
+                    "emoji": "📜",
+                    "details": "Muestra el historial de comandos usados."
+                },
+                {
+                    "id": "linux39",
+                    "command": "alias <nombre>=<comando>",
+                    "emoji": "🔧",
+                    "details": "Crea un alias para un comando."
+                },
+                {
+                    "id": "linux40",
+                    "command": "unalias <nombre>",
+                    "emoji": "❌",
+                    "details": "Elimina un alias de comando."
+                },
+                {
+                    "id": "linux41",
+                    "command": "crontab -e",
+                    "emoji": "⏲️",
+                    "details": "Edita el archivo crontab del usuario para programar tareas."
+                },
+                {
+                    "id": "linux42",
+                    "command": "cron",
+                    "emoji": "🗓️",
+                    "details": "Demonio que ejecuta tareas programadas."
+                },
+                {
+                    "id": "linux43",
+                    "command": "systemctl status",
+                    "emoji": "🛠️",
+                    "details": "Muestra el estado de los servicios del sistema."
+                },
+                {
+                    "id": "linux44",
+                    "command": "systemctl start <servicio>",
+                    "emoji": "▶️",
+                    "details": "Inicia un servicio."
+                },
+                {
+                    "id": "linux45",
+                    "command": "systemctl stop <servicio>",
+                    "emoji": "⏹️",
+                    "details": "Detiene un servicio."
+                },
+                {
+                    "id": "linux46",
+                    "command": "systemctl restart <servicio>",
+                    "emoji": "🔄",
+                    "details": "Reinicia un servicio."
+                },
+                {
+                    "id": "linux47",
+                    "command": "hostname",
+                    "emoji": "🏠",
+                    "details": "Muestra o establece el nombre del host del sistema."
+                },
+                {
+                    "id": "linux48",
+                    "command": "reboot",
+                    "emoji": "🔄",
+                    "details": "Reinicia el sistema."
+                },
+                {
+                    "section": "Comandos de Nivel Medio",
+                    "items": [
+                        {
+                            "id": "linux49",
+                            "command": "find <directorio> -type <tipo>",
+                            "emoji": "🔍",
+                            "details": "Busca archivos y directorios de un tipo específico en un directorio."
+                        },
+                        {
+                            "id": "linux50",
+                            "command": "grep -r <patrón> <directorio>",
+                            "emoji": "🔎",
+                            "details": "Busca un patrón recursivamente en todos los archivos de un directorio."
+                        },
+                        {
+                            "id": "linux51",
+                            "command": "chmod -R <permisos> <directorio>",
+                            "emoji": "🔐",
+                            "details": "Cambia los permisos de un directorio y su contenido de forma recursiva."
+                        },
+                        {
+                            "id": "linux52",
+                            "command": "du -sh <directorio>",
+                            "emoji": "📊",
+                            "details": "Muestra el tamaño total de un directorio de forma resumida."
+                        },
+                        {
+                            "id": "linux53",
+                            "command": "ls -la",
+                            "emoji": "📜",
+                            "details": "Lista el contenido de un directorio con detalles y archivos ocultos."
+                        },
+                        {
+                            "id": "linux54",
+                            "command": "top -u <usuario>",
+                            "emoji": "📊",
+                            "details": "Muestra los procesos de un usuario específico en tiempo real."
+                        },
+                        {
+                            "id": "linux55",
+                            "command": "df -h",
+                            "emoji": "💾",
+                            "details": "Muestra el uso del espacio en disco en formato legible."
+                        },
+                        {
+                            "id": "linux56",
+                            "command": "tar -cvzf <archivo>.tar.gz <directorio>",
+                            "emoji": "📦",
+                            "details": "Crea un archivo tar comprimido con gzip."
+                        },
+                        {
+                            "id": "linux57",
+                            "command": "tar -xvzf <archivo>.tar.gz",
+                            "emoji": "📂",
+                            "details": "Extrae el contenido de un archivo tar comprimido con gzip."
+                        }
+                    ]
+                },
+                {
+                    "section": "Comandos Avanzados",
+                    "items": [
+                        {
+                            "id": "linux58",
+                            "command": "awk '{print $1}' <archivo>",
+                            "emoji": "📏",
+                            "details": "Procesa y analiza datos en archivos o entradas."
+                        },
+                        {
+                            "id": "linux59",
+                            "command": "sed 's/patrón/reemplazo/' <archivo>",
+                            "emoji": "✏️",
+                            "details": "Realiza sustituciones en el contenido de un archivo."
+                        },
+                        {
+                            "id": "linux60",
+                            "command": "grep -P '<expresión regular>' <archivo>",
+                            "emoji": "🔎",
+                            "details": "Busca patrones con expresiones regulares avanzadas en un archivo."
+                        },
+                        {
+                            "id": "linux61",
+                            "command": "find <directorio> -exec <comando> {} \\;",
+                            "emoji": "🔄",
+                            "details": "Ejecuta un comando en cada archivo encontrado por `find`."
+                        },
+                        {
+                            "id": "linux62",
+                            "command": "strace <comando>",
+                            "emoji": "🔍",
+                            "details": "Rastrea las llamadas al sistema realizadas por un comando."
+                        },
+                        {
+                            "id": "linux63",
+                            "command": "lsof",
+                            "emoji": "📂",
+                            "details": "Lista archivos abiertos y los procesos que los han abierto."
+                        },
+                        {
+                            "id": "linux64",
+                            "command": "netstat -tuln",
+                            "emoji": "🌐",
+                            "details": "Muestra información sobre las conexiones de red y puertos abiertos."
+                        },
+                        {
+                            "id": "linux65",
+                            "command": "tcpdump -i <interfaz>",
+                            "emoji": "📡",
+                            "details": "Captura y muestra paquetes de red en una interfaz específica."
+                        },
+                        {
+                            "id": "linux66",
+                            "command": "vmstat",
+                            "emoji": "🖥️",
+                            "details": "Muestra estadísticas del sistema sobre procesos, memoria, paginación y más."
+                        },
+                        {
+                            "id": "linux67",
+                            "command": "iostat",
+                            "emoji": "📈",
+                            "details": "Muestra estadísticas sobre el uso del CPU y del disco."
+                        },
+                        {
+                            "id": "linux68",
+                            "command": "dd if=<archivo> of=<dispositivo> bs=<tamaño>",
+                            "emoji": "🔄",
+                            "details": "Copia y convierte archivos y dispositivos."
+                        },
+                        {
+                            "id": "linux69",
+                            "command": "chroot <directorio>",
+                            "emoji": "🗂️",
+                            "details": "Cambia el directorio raíz del proceso actual a un nuevo directorio."
+                        },
+                        {
+                            "id": "linux70",
+                            "command": "docker run <imagen>",
+                            "emoji": "🐳",
+                            "details": "Ejecuta un contenedor Docker basado en una imagen."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "section": "Comandos Básicos de Docker",
+            "items": [
+                {
+                    "id": "docker1",
+                    "command": "docker --version",
+                    "emoji": "🔢",
+                    "details": "Muestra la versión de Docker instalada."
+                },
+                {
+                    "id": "docker2",
+                    "command": "docker pull <imagen>",
+                    "emoji": "⬇️",
+                    "details": "Descarga una imagen de Docker desde un registro."
+                },
+                {
+                    "id": "docker3",
+                    "command": "docker build -t <nombre>:<tag> <directorio>",
+                    "emoji": "🔨",
+                    "details": "Construye una imagen de Docker a partir de un Dockerfile."
+                },
+                {
+                    "id": "docker4",
+                    "command": "docker run <opciones> <imagen>",
+                    "emoji": "▶️",
+                    "details": "Crea y ejecuta un contenedor a partir de una imagen."
+                },
+                {
+                    "id": "docker5",
+                    "command": "docker ps",
+                    "emoji": "🕵️",
+                    "details": "Lista los contenedores en ejecución."
+                },
+                {
+                    "id": "docker6",
+                    "command": "docker ps -a",
+                    "emoji": "🗂️",
+                    "details": "Lista todos los contenedores, incluyendo los detenidos."
+                },
+                {
+                    "id": "docker7",
+                    "command": "docker stop <contenedor>",
+                    "emoji": "⏹️",
+                    "details": "Detiene un contenedor en ejecución."
+                },
+                {
+                    "id": "docker8",
+                    "command": "docker start <contenedor>",
+                    "emoji": "▶️",
+                    "details": "Inicia un contenedor detenido."
+                },
+                {
+                    "id": "docker9",
+                    "command": "docker restart <contenedor>",
+                    "emoji": "🔄",
+                    "details": "Reinicia un contenedor."
+                },
+                {
+                    "id": "docker10",
+                    "command": "docker rm <contenedor>",
+                    "emoji": "🗑️",
+                    "details": "Elimina un contenedor."
+                },
+                {
+                    "id": "docker11",
+                    "command": "docker rmi <imagen>",
+                    "emoji": "🗑️",
+                    "details": "Elimina una imagen."
+                },
+                {
+                    "id": "docker12",
+                    "command": "docker logs <contenedor>",
+                    "emoji": "📝",
+                    "details": "Muestra los logs de un contenedor."
+                },
+                {
+                    "id": "docker13",
+                    "command": "docker exec -it <contenedor> <comando>",
+                    "emoji": "🔧",
+                    "details": "Ejecuta un comando en un contenedor en ejecución."
+                },
+                {
+                    "id": "docker14",
+                    "command": "docker network ls",
+                    "emoji": "🌐",
+                    "details": "Lista las redes Docker disponibles."
+                },
+                {
+                    "id": "docker15",
+                    "command": "docker volume ls",
+                    "emoji": "💾",
+                    "details": "Lista los volúmenes Docker disponibles."
+                },
+                {
+                    "id": "docker16",
+                    "command": "docker-compose up",
+                    "emoji": "🔧",
+                    "details": "Inicia los servicios definidos en un archivo docker-compose.yml."
+                },
+                {
+                    "id": "docker17",
+                    "command": "docker-compose down",
+                    "emoji": "⬇️",
+                    "details": "Detiene y elimina los contenedores definidos en docker-compose.yml."
+                },
+                {
+                    "id": "docker18",
+                    "command": "docker-compose logs",
+                    "emoji": "📜",
+                    "details": "Muestra los logs de los servicios definidos en docker-compose.yml."
+                },
+                {
+                    "id": "docker19",
+                    "command": "docker-compose build",
+                    "emoji": "🔨",
+                    "details": "Construye las imágenes de los servicios definidos en docker-compose.yml."
+                },
+                {
+                    "id": "docker20",
+                    "command": "docker-compose ps",
+                    "emoji": "🕵️",
+                    "details": "Muestra el estado de los contenedores definidos en docker-compose.yml."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Medios de Docker",
+            "items": [
+                {
+                    "id": "docker21",
+                    "command": "docker inspect <contenedor|imagen>",
+                    "emoji": "🔍",
+                    "details": "Muestra detalles en formato JSON sobre un contenedor o imagen."
+                },
+                {
+                    "id": "docker22",
+                    "command": "docker network create <nombre>",
+                    "emoji": "🌐",
+                    "details": "Crea una nueva red Docker."
+                },
+                {
+                    "id": "docker23",
+                    "command": "docker volume create <nombre>",
+                    "emoji": "💾",
+                    "details": "Crea un nuevo volumen Docker."
+                },
+                {
+                    "id": "docker24",
+                    "command": "docker-compose up -d",
+                    "emoji": "🚀",
+                    "details": "Inicia los servicios en segundo plano."
+                },
+                {
+                    "id": "docker25",
+                    "command": "docker-compose run <servicio> <comando>",
+                    "emoji": "▶️",
+                    "details": "Ejecuta un comando en un contenedor de servicio específico."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Avanzados de Docker",
+            "items": [
+                {
+                    "id": "docker26",
+                    "command": "docker swarm init",
+                    "emoji": "🌀",
+                    "details": "Inicializa un nuevo clúster Docker Swarm."
+                },
+                {
+                    "id": "docker27",
+                    "command": "docker stack deploy -c <archivo> <nombre>",
+                    "emoji": "📦",
+                    "details": "Despliega una pila de servicios en un clúster Docker Swarm."
+                },
+                {
+                    "id": "docker28",
+                    "command": "docker service ls",
+                    "emoji": "🗂️",
+                    "details": "Lista los servicios en un clúster Docker Swarm."
+                },
+                {
+                    "id": "docker29",
+                    "command": "docker service ps <servicio>",
+                    "emoji": "📋",
+                    "details": "Muestra el estado de las tareas de un servicio en Docker Swarm."
+                },
+                {
+                    "id": "docker30",
+                    "command": "docker-compose -f <archivo> config",
+                    "emoji": "📜",
+                    "details": "Muestra la configuración combinada de un archivo docker-compose."
+                },
+                {
+                    "id": "docker31",
+                    "command": "docker container update <opciones> <contenedor>",
+                    "emoji": "🔄",
+                    "details": "Actualiza las opciones de un contenedor en ejecución."
+                },
+                {
+                    "id": "docker32",
+                    "command": "docker buildx build <opciones>",
+                    "emoji": "🔨",
+                    "details": "Construye imágenes Docker utilizando BuildKit para capacidades avanzadas de construcción."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Medios y Avanzados de MySQL",
+            "items": [
+                {
+                    "id": "mysql21",
+                    "command": "CREATE INDEX idx_nombre ON <tabla> (columna);",
+                    "emoji": "🔍",
+                    "details": "Crea un índice en una columna para mejorar el rendimiento de las consultas."
+                },
+                {
+                    "id": "mysql22",
+                    "command": "DROP INDEX idx_nombre ON <tabla>;",
+                    "emoji": "❌",
+                    "details": "Elimina un índice existente de una tabla."
+                },
+                {
+                    "id": "mysql23",
+                    "command": "ALTER TABLE <tabla> MODIFY COLUMN columna tipo;",
+                    "emoji": "🔧",
+                    "details": "Modifica el tipo de una columna en una tabla."
+                },
+                {
+                    "id": "mysql24",
+                    "command": "TRUNCATE TABLE <tabla>;",
+                    "emoji": "🗑️",
+                    "details": "Elimina todos los registros de una tabla, pero no la tabla en sí."
+                },
+                {
+                    "id": "mysql25",
+                    "command": "RENAME TABLE <tabla_antigua> TO <tabla_nueva>;",
+                    "emoji": "🔄",
+                    "details": "Cambia el nombre de una tabla."
+                },
+                {
+                    "id": "mysql26",
+                    "command": "CREATE VIEW vista_nombre AS SELECT columna1, columna2 FROM <tabla> WHERE condición;",
+                    "emoji": "👁️",
+                    "details": "Crea una vista que muestra un conjunto de datos específico."
+                },
+                {
+                    "id": "mysql27",
+                    "command": "DROP VIEW vista_nombre;",
+                    "emoji": "❌",
+                    "details": "Elimina una vista existente."
+                },
+                {
+                    "id": "mysql28",
+                    "command": "CALL nombre_procedimiento(parametros);",
+                    "emoji": "⚙️",
+                    "details": "Llama a un procedimiento almacenado."
+                },
+                {
+                    "id": "mysql29",
+                    "command": "CREATE PROCEDURE nombre_procedimiento(parametros) BEGIN ... END;",
+                    "emoji": "⚙️",
+                    "details": "Crea un nuevo procedimiento almacenado."
+                },
+                {
+                    "id": "mysql30",
+                    "command": "DROP PROCEDURE nombre_procedimiento;",
+                    "emoji": "❌",
+                    "details": "Elimina un procedimiento almacenado existente."
+                },
+                {
+                    "id": "mysql31",
+                    "command": "SET GLOBAL variable = valor;",
+                    "emoji": "🔧",
+                    "details": "Establece una variable global del sistema."
+                },
+                {
+                    "id": "mysql32",
+                    "command": "SHOW VARIABLES LIKE 'variable_name';",
+                    "emoji": "🔍",
+                    "details": "Muestra el valor actual de una variable del sistema."
+                },
+                {
+                    "id": "mysql33",
+                    "command": "EXPLAIN SELECT * FROM <tabla>;",
+                    "emoji": "🔍",
+                    "details": "Muestra el plan de ejecución para una consulta SELECT."
+                },
+                {
+                    "id": "mysql34",
+                    "command": "SHOW TABLE STATUS LIKE '<tabla>';",
+                    "emoji": "📊",
+                    "details": "Muestra información detallada sobre una tabla, como el tamaño y la cantidad de registros."
+                },
+                {
+                    "id": "mysql35",
+                    "command": "SHOW VARIABLES;",
+                    "emoji": "🔍",
+                    "details": "Muestra todas las variables del sistema MySQL."
+                },
+                {
+                    "id": "mysql36",
+                    "command": "ANALYZE TABLE <tabla>;",
+                    "emoji": "🔍",
+                    "details": "Analiza y optimiza la tabla para mejorar el rendimiento de las consultas."
+                },
+                {
+                    "id": "mysql37",
+                    "command": "OPTIMIZE TABLE <tabla>;",
+                    "emoji": "⚙️",
+                    "details": "Optimiza una tabla para mejorar el rendimiento y reducir el espacio utilizado."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Básicos de PostgreSQL",
+            "items": [
+                {
+                    "id": "postgres1",
+                    "command": "psql -U <usuario> -d <base_de_datos>",
+                    "emoji": "🔑",
+                    "details": "Inicia sesión en el cliente psql de PostgreSQL."
+                },
+                {
+                    "id": "postgres2",
+                    "command": "\\l",
+                    "emoji": "📂",
+                    "details": "Muestra todas las bases de datos disponibles."
+                },
+                {
+                    "id": "postgres3",
+                    "command": "\\c <base_de_datos>",
+                    "emoji": "📂",
+                    "details": "Selecciona una base de datos para usar."
+                },
+                {
+                    "id": "postgres4",
+                    "command": "\\dt",
+                    "emoji": "📋",
+                    "details": "Muestra todas las tablas en la base de datos seleccionada."
+                },
+                {
+                    "id": "postgres5",
+                    "command": "\\d <tabla>",
+                    "emoji": "📄",
+                    "details": "Muestra la estructura de una tabla."
+                },
+                {
+                    "id": "postgres6",
+                    "command": "SELECT * FROM <tabla>;",
+                    "emoji": "🔍",
+                    "details": "Selecciona todos los registros de una tabla."
+                },
+                {
+                    "id": "postgres7",
+                    "command": "INSERT INTO <tabla> (columna1, columna2) VALUES (valor1, valor2);",
+                    "emoji": "➕",
+                    "details": "Inserta un nuevo registro en una tabla."
+                },
+                {
+                    "id": "postgres8",
+                    "command": "UPDATE <tabla> SET columna1 = valor1 WHERE condición;",
+                    "emoji": "🔄",
+                    "details": "Actualiza registros existentes en una tabla."
+                },
+                {
+                    "id": "postgres9",
+                    "command": "DELETE FROM <tabla> WHERE condición;",
+                    "emoji": "🗑️",
+                    "details": "Elimina registros de una tabla."
+                },
+                {
+                    "id": "postgres10",
+                    "command": "CREATE DATABASE <base_de_datos>;",
+                    "emoji": "🆕",
+                    "details": "Crea una nueva base de datos."
+                },
+                {
+                    "id": "postgres11",
+                    "command": "DROP DATABASE <base_de_datos>;",
+                    "emoji": "❌",
+                    "details": "Elimina una base de datos existente."
+                },
+                {
+                    "id": "postgres12",
+                    "command": "CREATE TABLE <tabla> (columna1 tipo1, columna2 tipo2);",
+                    "emoji": "🆕",
+                    "details": "Crea una nueva tabla."
+                },
+                {
+                    "id": "postgres13",
+                    "command": "DROP TABLE <tabla>;",
+                    "emoji": "❌",
+                    "details": "Elimina una tabla existente."
+                },
+                {
+                    "id": "postgres14",
+                    "command": "ALTER TABLE <tabla> ADD COLUMN columna tipo;",
+                    "emoji": "🔧",
+                    "details": "Añade una nueva columna a una tabla."
+                },
+                {
+                    "id": "postgres15",
+                    "command": "ALTER TABLE <tabla> DROP COLUMN columna;",
+                    "emoji": "🗑️",
+                    "details": "Elimina una columna de una tabla."
+                },
+                {
+                    "id": "postgres16",
+                    "command": "GRANT ALL PRIVILEGES ON DATABASE <base_de_datos> TO <usuario>;",
+                    "emoji": "🔑",
+                    "details": "Concede todos los privilegios a un usuario para una base de datos."
+                },
+                {
+                    "id": "postgres17",
+                    "command": "REVOKE ALL PRIVILEGES ON DATABASE <base_de_datos> FROM <usuario>;",
+                    "emoji": "🔓",
+                    "details": "Revoca todos los privilegios de un usuario para una base de datos."
+                },
+                {
+                    "id": "postgres18",
+                    "command": "\\du",
+                    "emoji": "👤",
+                    "details": "Muestra los roles de los usuarios."
+                },
+                {
+                    "id": "postgres19",
+                    "command": "\\q",
+                    "emoji": "🚪",
+                    "details": "Sale del cliente psql."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Medios de PostgreSQL",
+            "items": [
+                {
+                    "id": "postgres20",
+                    "command": "EXPLAIN SELECT * FROM <tabla>;",
+                    "emoji": "🔍",
+                    "details": "Muestra el plan de ejecución de una consulta."
+                },
+                {
+                    "id": "postgres21",
+                    "command": "VACUUM <tabla>;",
+                    "emoji": "🧹",
+                    "details": "Limpia la base de datos y actualiza las estadísticas."
+                },
+                {
+                    "id": "postgres22",
+                    "command": "REINDEX TABLE <tabla>;",
+                    "emoji": "🔄",
+                    "details": "Reconstruye los índices de una tabla."
+                },
+                {
+                    "id": "postgres23",
+                    "command": "CREATE INDEX <nombre_indice> ON <tabla> (columna);",
+                    "emoji": "📈",
+                    "details": "Crea un índice en una columna de una tabla."
+                },
+                {
+                    "id": "postgres24",
+                    "command": "DROP INDEX <nombre_indice>;",
+                    "emoji": "❌",
+                    "details": "Elimina un índice existente."
+                },
+                {
+                    "id": "postgres25",
+                    "command": "ALTER TABLE <tabla> RENAME COLUMN columna TO nuevo_nombre;",
+                    "emoji": "✏️",
+                    "details": "Cambia el nombre de una columna en una tabla."
+                },
+                {
+                    "id": "postgres26",
+                    "command": "ALTER TABLE <tabla> RENAME TO nuevo_nombre;",
+                    "emoji": "✏️",
+                    "details": "Cambia el nombre de una tabla."
+                },
+                {
+                    "id": "postgres27",
+                    "command": "CREATE VIEW <vista> AS SELECT * FROM <tabla>;",
+                    "emoji": "👁️",
+                    "details": "Crea una vista que muestra el resultado de una consulta."
+                },
+                {
+                    "id": "postgres28",
+                    "command": "DROP VIEW <vista>;",
+                    "emoji": "❌",
+                    "details": "Elimina una vista existente."
+                },
+                {
+                    "id": "postgres29",
+                    "command": "CREATE FUNCTION <funcion> (<parametros>) RETURNS <tipo> AS $$ <cuerpo> $$ LANGUAGE <lenguaje>;",
+                    "emoji": "🔧",
+                    "details": "Crea una nueva función en PostgreSQL."
+                },
+                {
+                    "id": "postgres30",
+                    "command": "DROP FUNCTION <funcion>;",
+                    "emoji": "❌",
+                    "details": "Elimina una función existente."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Avanzados de PostgreSQL",
+            "items": [
+                {
+                    "id": "postgres31",
+                    "command": "pg_dump <base_de_datos> > backup.sql",
+                    "emoji": "💾",
+                    "details": "Crea una copia de seguridad de la base de datos."
+                },
+                {
+                    "id": "postgres32",
+                    "command": "pg_restore -d <base_de_datos> backup.sql",
+                    "emoji": "🔄",
+                    "details": "Restaura una base de datos desde una copia de seguridad."
+                },
+                {
+                    "id": "postgres33",
+                    "command": "CREATE ROLE <rol> WITH LOGIN PASSWORD '<contraseña>';",
+                    "emoji": "👤",
+                    "details": "Crea un nuevo rol con acceso de login y contraseña."
+                },
+                {
+                    "id": "postgres34",
+                    "command": "ALTER ROLE <rol> SET <opción> = <valor>;",
+                    "emoji": "🔧",
+                    "details": "Modifica las opciones de configuración de un rol."
+                },
+                {
+                    "id": "postgres35",
+                    "command": "DROP ROLE <rol>;",
+                    "emoji": "❌",
+                    "details": "Elimina un rol existente."
+                },
+                {
+                    "id": "postgres36",
+                    "command": "SET <opción> = <valor>;",
+                    "emoji": "⚙️",
+                    "details": "Establece una opción de configuración para la sesión actual."
+                },
+                {
+                    "id": "postgres37",
+                    "command": "SHOW <opción>;",
+                    "emoji": "🔍",
+                    "details": "Muestra el valor actual de una opción de configuración."
+                },
+                {
+                    "id": "postgres38",
+                    "command": "CREATE SCHEMA <esquema>;",
+                    "emoji": "📁",
+                    "details": "Crea un nuevo esquema en la base de datos."
+                },
+                {
+                    "id": "postgres39",
+                    "command": "DROP SCHEMA <esquema> CASCADE;",
+                    "emoji": "❌",
+                    "details": "Elimina un esquema y todos sus objetos."
+                },
+                {
+                    "id": "postgres40",
+                    "command": "CREATE TRIGGER <nombre_trigger> BEFORE INSERT ON <tabla> FOR EACH ROW EXECUTE FUNCTION <funcion>();",
+                    "emoji": "🔄",
+                    "details": "Crea un trigger que ejecuta una función antes de insertar una fila en una tabla."
+                },
+                {
+                    "id": "postgres41",
+                    "command": "DROP TRIGGER <nombre_trigger> ON <tabla>;",
+                    "emoji": "❌",
+                    "details": "Elimina un trigger existente de una tabla."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Básicos de Nginx",
+            "items": [
+                {
+                    "id": "nginx1",
+                    "command": "nginx -v",
+                    "emoji": "🔢",
+                    "details": "Muestra la versión de Nginx instalada."
+                },
+                {
+                    "id": "nginx2",
+                    "command": "nginx -t",
+                    "emoji": "🔍",
+                    "details": "Verifica la configuración de Nginx para errores."
+                },
+                {
+                    "id": "nginx3",
+                    "command": "nginx -s stop",
+                    "emoji": "🛑",
+                    "details": "Detiene el servidor Nginx."
+                },
+                {
+                    "id": "nginx4",
+                    "command": "nginx -s quit",
+                    "emoji": "🚪",
+                    "details": "Detiene Nginx de manera ordenada."
+                },
+                {
+                    "id": "nginx5",
+                    "command": "nginx -s reload",
+                    "emoji": "🔄",
+                    "details": "Recarga la configuración de Nginx sin detener el servicio."
+                },
+                {
+                    "id": "nginx6",
+                    "command": "nginx -s reopen",
+                    "emoji": "🔄",
+                    "details": "Reabre los archivos de registro."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Medios de Nginx",
+            "items": [
+                {
+                    "id": "nginx7",
+                    "command": "nginx -g 'daemon off;'",
+                    "emoji": "🔧",
+                    "details": "Inicia Nginx en primer plano, útil para depuración en contenedores."
+                },
+                {
+                    "id": "nginx8",
+                    "command": "nginx -c /path/to/nginx.conf",
+                    "emoji": "📂",
+                    "details": "Especifica un archivo de configuración personalizado para Nginx."
+                },
+                {
+                    "id": "nginx9",
+                    "command": "nginx -p /path/to/prefix",
+                    "emoji": "📍",
+                    "details": "Establece el directorio raíz para la búsqueda de archivos de configuración y registros."
+                },
+                {
+                    "id": "nginx10",
+                    "command": "nginx -g 'worker_processes 4;'",
+                    "emoji": "🛠️",
+                    "details": "Establece el número de procesos de trabajo en línea de comandos."
+                },
+                {
+                    "id": "nginx11",
+                    "command": "nginx -V",
+                    "emoji": "🔍",
+                    "details": "Muestra la versión de Nginx junto con los módulos compilados."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Avanzados de Nginx",
+            "items": [
+                {
+                    "id": "nginx12",
+                    "command": "nginx -t -q",
+                    "emoji": "🔎",
+                    "details": "Verifica la configuración de Nginx sin mostrar mensajes informativos, sólo errores."
+                },
+                {
+                    "id": "nginx13",
+                    "command": "nginx -c /etc/nginx/nginx.conf -p /var/lib/nginx/",
+                    "emoji": "📁",
+                    "details": "Carga una configuración específica y establece un prefijo de ruta para archivos."
+                },
+                {
+                    "id": "nginx14",
+                    "command": "nginx -s stop -c /etc/nginx/nginx.conf",
+                    "emoji": "⏹️",
+                    "details": "Detiene Nginx usando una configuración específica."
+                },
+                {
+                    "id": "nginx15",
+                    "command": "nginx -s reload -c /etc/nginx/nginx.conf",
+                    "emoji": "🔄",
+                    "details": "Recarga la configuración de Nginx usando un archivo de configuración específico."
+                },
+                {
+                    "id": "nginx16",
+                    "command": "nginx -s reopen -c /etc/nginx/nginx.conf",
+                    "emoji": "🔄",
+                    "details": "Reabre los archivos de registro usando una configuración específica."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Básicos de Apache",
+            "items": [
+                {
+                    "id": "apache1",
+                    "command": "apache2 -v",
+                    "emoji": "🔢",
+                    "details": "Muestra la versión de Apache instalada."
+                },
+                {
+                    "id": "apache2",
+                    "command": "apache2ctl configtest",
+                    "emoji": "🔍",
+                    "details": "Verifica la configuración de Apache para errores."
+                },
+                {
+                    "id": "apache3",
+                    "command": "apache2ctl start",
+                    "emoji": "▶️",
+                    "details": "Inicia el servidor Apache."
+                },
+                {
+                    "id": "apache4",
+                    "command": "apache2ctl stop",
+                    "emoji": "🛑",
+                    "details": "Detiene el servidor Apache."
+                },
+                {
+                    "id": "apache5",
+                    "command": "apache2ctl restart",
+                    "emoji": "🔄",
+                    "details": "Reinicia el servidor Apache."
+                },
+                {
+                    "id": "apache6",
+                    "command": "apache2ctl graceful",
+                    "emoji": "🔄",
+                    "details": "Reinicia el servidor Apache de manera ordenada."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Medios y Avanzados de Apache",
+            "items": [
+                {
+                    "id": "apache7",
+                    "command": "apache2ctl status",
+                    "emoji": "📊",
+                    "details": "Muestra el estado del servidor Apache (requiere mod_status habilitado)."
+                },
+                {
+                    "id": "apache8",
+                    "command": "apache2ctl fullstatus",
+                    "emoji": "📈",
+                    "details": "Proporciona una vista completa del estado del servidor Apache (requiere mod_status habilitado y configurado)."
+                },
+                {
+                    "id": "apache9",
+                    "command": "apache2ctl -t",
+                    "emoji": "🔍",
+                    "details": "Prueba la configuración de Apache sin realizar cambios."
+                },
+                {
+                    "id": "apache10",
+                    "command": "apache2ctl -k start",
+                    "emoji": "▶️",
+                    "details": "Inicia el servidor Apache con el método 'start' (alternativa a apache2ctl start)."
+                },
+                {
+                    "id": "apache11",
+                    "command": "apache2ctl -k stop",
+                    "emoji": "🛑",
+                    "details": "Detiene el servidor Apache con el método 'stop' (alternativa a apache2ctl stop)."
+                },
+                {
+                    "id": "apache12",
+                    "command": "apache2ctl -k restart",
+                    "emoji": "🔄",
+                    "details": "Reinicia el servidor Apache con el método 'restart' (alternativa a apache2ctl restart)."
+                },
+                {
+                    "id": "apache13",
+                    "command": "apache2ctl -k graceful",
+                    "emoji": "🔄",
+                    "details": "Reinicia el servidor Apache de manera ordenada con el método 'graceful' (alternativa a apache2ctl graceful)."
+                },
+                {
+                    "id": "apache14",
+                    "command": "apache2ctl -k restart -D FOREGROUND",
+                    "emoji": "🔄",
+                    "details": "Reinicia el servidor Apache en primer plano, útil para depuración."
+                },
+                {
+                    "id": "apache15",
+                    "command": "apache2ctl -M",
+                    "emoji": "🔧",
+                    "details": "Muestra una lista de todos los módulos cargados en Apache."
+                },
+                {
+                    "id": "apache16",
+                    "command": "apache2ctl -S",
+                    "emoji": "🗺️",
+                    "details": "Muestra la configuración de los virtual hosts y otras configuraciones de Apache."
+                },
+                {
+                    "id": "apache17",
+                    "command": "apache2ctl -V",
+                    "emoji": "🔢",
+                    "details": "Muestra información sobre la versión y la configuración de Apache, similar a 'apache2 -v', pero con más detalles."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Básicos y Avanzados de Redis",
+            "items": [
+                {
+                    "id": "redis1",
+                    "command": "redis-server --version",
+                    "emoji": "🔢",
+                    "details": "Muestra la versión de Redis instalada."
+                },
+                {
+                    "id": "redis2",
+                    "command": "redis-cli",
+                    "emoji": "🖥️",
+                    "details": "Inicia la interfaz de línea de comandos de Redis."
+                },
+                {
+                    "id": "redis3",
+                    "command": "SET <clave> <valor>",
+                    "emoji": "➕",
+                    "details": "Establece un valor para una clave."
+                },
+                {
+                    "id": "redis4",
+                    "command": "GET <clave>",
+                    "emoji": "🔍",
+                    "details": "Obtiene el valor asociado a una clave."
+                },
+                {
+                    "id": "redis5",
+                    "command": "DEL <clave>",
+                    "emoji": "🗑️",
+                    "details": "Elimina una clave."
+                },
+                {
+                    "id": "redis6",
+                    "command": "KEYS *",
+                    "emoji": "📋",
+                    "details": "Lista todas las claves en la base de datos."
+                },
+                {
+                    "id": "redis7",
+                    "command": "EXPIRE <clave> <segundos>",
+                    "emoji": "⏳",
+                    "details": "Establece un tiempo de expiración para una clave en segundos."
+                },
+                {
+                    "id": "redis8",
+                    "command": "TTL <clave>",
+                    "emoji": "⏲️",
+                    "details": "Obtiene el tiempo restante para la expiración de una clave."
+                },
+                {
+                    "id": "redis9",
+                    "command": "HSET <hash> <campo> <valor>",
+                    "emoji": "🗃️",
+                    "details": "Establece un campo en un hash."
+                },
+                {
+                    "id": "redis10",
+                    "command": "HGET <hash> <campo>",
+                    "emoji": "📦",
+                    "details": "Obtiene el valor de un campo en un hash."
+                },
+                {
+                    "id": "redis11",
+                    "command": "LPUSH <lista> <valor>",
+                    "emoji": "🔄",
+                    "details": "Añade un valor al inicio de una lista."
+                },
+                {
+                    "id": "redis12",
+                    "command": "LRANGE <lista> <inicio> <fin>",
+                    "emoji": "📊",
+                    "details": "Obtiene una parte de una lista, desde el índice de inicio hasta el índice de fin."
+                },
+                {
+                    "id": "redis13",
+                    "command": "SADD <set> <valor>",
+                    "emoji": "➕",
+                    "details": "Añade un valor a un conjunto."
+                },
+                {
+                    "id": "redis14",
+                    "command": "SMEMBERS <set>",
+                    "emoji": "📑",
+                    "details": "Obtiene todos los miembros de un conjunto."
+                },
+                {
+                    "id": "redis15",
+                    "command": "ZADD <sorted-set> <puntuación> <valor>",
+                    "emoji": "📈",
+                    "details": "Añade un miembro a un conjunto ordenado con una puntuación."
+                },
+                {
+                    "id": "redis16",
+                    "command": "ZRANGE <sorted-set> <inicio> <fin>",
+                    "emoji": "📉",
+                    "details": "Obtiene miembros de un conjunto ordenado en un rango de puntuaciones."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Básicos de MongoDB",
+            "items": [
+                {
+                    "id": "mongodb1",
+                    "command": "mongo --version",
+                    "emoji": "🔢",
+                    "details": "Muestra la versión de MongoDB instalada."
+                },
+                {
+                    "id": "mongodb2",
+                    "command": "mongo",
+                    "emoji": "🖥️",
+                    "details": "Inicia la shell de MongoDB."
+                },
+                {
+                    "id": "mongodb3",
+                    "command": "use <base_de_datos>",
+                    "emoji": "📂",
+                    "details": "Selecciona una base de datos para usar."
+                },
+                {
+                    "id": "mongodb4",
+                    "command": "db.createCollection('<colección>')",
+                    "emoji": "🆕",
+                    "details": "Crea una nueva colección en la base de datos."
+                },
+                {
+                    "id": "mongodb5",
+                    "command": "db.<colección>.find()",
+                    "emoji": "🔍",
+                    "details": "Muestra todos los documentos en una colección."
+                },
+                {
+                    "id": "mongodb6",
+                    "command": "db.<colección>.insert({clave: valor})",
+                    "emoji": "➕",
+                    "details": "Inserta un nuevo documento en una colección."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Medios de MongoDB",
+            "items": [
+                {
+                    "id": "mongodb7",
+                    "command": "db.<colección>.find({clave: valor})",
+                    "emoji": "🔎",
+                    "details": "Encuentra documentos en una colección que coincidan con la consulta."
+                },
+                {
+                    "id": "mongodb8",
+                    "command": "db.<colección>.update({filtro}, {actualización})",
+                    "emoji": "✏️",
+                    "details": "Actualiza documentos en una colección que coincidan con el filtro."
+                },
+                {
+                    "id": "mongodb9",
+                    "command": "db.<colección>.remove({filtro})",
+                    "emoji": "🗑️",
+                    "details": "Elimina documentos en una colección que coincidan con el filtro."
+                },
+                {
+                    "id": "mongodb10",
+                    "command": "db.<colección>.aggregate([{$match: {clave: valor}}, {$group: {_id: '$campo', total: {$sum: 1}}}])",
+                    "emoji": "📊",
+                    "details": "Realiza una agregación en una colección, permitiendo operaciones complejas como agrupaciones y filtrado."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Avanzados de MongoDB",
+            "items": [
+                {
+                    "id": "mongodb11",
+                    "command": "db.<colección>.createIndex({campo: 1})",
+                    "emoji": "🔍",
+                    "details": "Crea un índice en un campo para mejorar el rendimiento de las consultas."
+                },
+                {
+                    "id": "mongodb12",
+                    "command": "db.<colección>.replSetInitiate()",
+                    "emoji": "🔄",
+                    "details": "Inicia la replicación en un conjunto de réplicas."
+                },
+                {
+                    "id": "mongodb13",
+                    "command": "db.<colección>.watch()",
+                    "emoji": "👁️",
+                    "details": "Monitorea los cambios en una colección en tiempo real."
+                },
+                {
+                    "id": "mongodb14",
+                    "command": "db.adminCommand({serverStatus: 1})",
+                    "emoji": "🛠️",
+                    "details": "Muestra el estado del servidor MongoDB, incluyendo estadísticas y métricas de rendimiento."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Básicos de JavaScript",
+            "items": [
+                {
+                    "id": "js1",
+                    "command": "console.log(<mensaje>)",
+                    "emoji": "📝",
+                    "details": "Imprime un mensaje en la consola."
+                },
+                {
+                    "id": "js2",
+                    "command": "let <variable> = <valor>;",
+                    "emoji": "📦",
+                    "details": "Declara una variable y le asigna un valor."
+                },
+                {
+                    "id": "js3",
+                    "command": "const <variable> = <valor>;",
+                    "emoji": "🔒",
+                    "details": "Declara una constante y le asigna un valor."
+                },
+                {
+                    "id": "js4",
+                    "command": "function <nombre>(<parametros>) { <código> }",
+                    "emoji": "🔧",
+                    "details": "Define una función."
+                },
+                {
+                    "id": "js5",
+                    "command": "for (<inicialización>; <condición>; <actualización>) { <código> }",
+                    "emoji": "🔄",
+                    "details": "Define un bucle for."
+                },
+                {
+                    "id": "js6",
+                    "command": "if (<condición>) { <código> }",
+                    "emoji": "🔄",
+                    "details": "Ejecuta código si la condición es verdadera."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Medios de JavaScript",
+            "items": [
+                {
+                    "id": "js7",
+                    "command": "array.push(<elemento>)",
+                    "emoji": "📈",
+                    "details": "Añade un elemento al final del array."
+                },
+                {
+                    "id": "js8",
+                    "command": "array.pop()",
+                    "emoji": "📉",
+                    "details": "Elimina el último elemento del array."
+                },
+                {
+                    "id": "js9",
+                    "command": "array.map(<función>)",
+                    "emoji": "🔄",
+                    "details": "Crea un nuevo array con los resultados de aplicar una función a cada elemento del array original."
+                },
+                {
+                    "id": "js10",
+                    "command": "array.filter(<función>)",
+                    "emoji": "🔎",
+                    "details": "Crea un nuevo array con todos los elementos que pasen la prueba de la función."
+                },
+                {
+                    "id": "js11",
+                    "command": "try { <código> } catch (<error>) { <manejador> }",
+                    "emoji": "⚠️",
+                    "details": "Manejo de excepciones para ejecutar código que puede lanzar errores."
+                },
+                {
+                    "id": "js12",
+                    "command": "async function <nombre>(<parametros>) { <código> }",
+                    "emoji": "⏳",
+                    "details": "Define una función asíncrona que permite usar `await` dentro de ella."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Avanzados de JavaScript",
+            "items": [
+                {
+                    "id": "js13",
+                    "command": "Promise.resolve(<valor>)",
+                    "emoji": "💎",
+                    "details": "Devuelve una promesa que se resuelve con el valor dado."
+                },
+                {
+                    "id": "js14",
+                    "command": "Promise.all([<promesa1>, <promesa2>, ...])",
+                    "emoji": "🔗",
+                    "details": "Devuelve una promesa que se resuelve cuando todas las promesas en el array se han resuelto."
+                },
+                {
+                    "id": "js15",
+                    "command": "fetch(<url>)",
+                    "emoji": "🌐",
+                    "details": "Realiza una solicitud HTTP a la URL dada y devuelve una promesa que se resuelve con la respuesta."
+                },
+                {
+                    "id": "js16",
+                    "command": "Object.entries(<objeto>)",
+                    "emoji": "🔑",
+                    "details": "Devuelve un array de pares [clave, valor] de las propiedades enumerables propias de un objeto."
+                },
+                {
+                    "id": "js17",
+                    "command": "Object.assign(<destino>, <origen>)",
+                    "emoji": "🔄",
+                    "details": "Copia todas las propiedades enumerables de uno o más objetos fuente al objeto destino."
+                },
+                {
+                    "id": "js18",
+                    "command": "class <NombreDeClase> { constructor(<parametros>) { <código> } }",
+                    "emoji": "🏗️",
+                    "details": "Define una clase en JavaScript."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Básicos de Python",
+            "items": [
+                {
+                    "id": "python1",
+                    "command": "python --version",
+                    "emoji": "🔢",
+                    "details": "Muestra la versión de Python instalada."
+                },
+                {
+                    "id": "python2",
+                    "command": "python <archivo>.py",
+                    "emoji": "▶️",
+                    "details": "Ejecuta un archivo Python."
+                },
+                {
+                    "id": "python3",
+                    "command": "import <módulo>",
+                    "emoji": "🔧",
+                    "details": "Importa un módulo en Python."
+                },
+                {
+                    "id": "python4",
+                    "command": "print(<mensaje>)",
+                    "emoji": "📝",
+                    "details": "Imprime un mensaje en la consola."
+                },
+                {
+                    "id": "python5",
+                    "command": "def <función>(<parametros>):\\n    <código>",
+                    "emoji": "🔧",
+                    "details": "Define una función."
+                },
+                {
+                    "id": "python6",
+                    "command": "for <variable> in <iterable>:\\n    <código>",
+                    "emoji": "🔄",
+                    "details": "Define un bucle for."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Medios de Python",
+            "items": [
+                {
+                    "id": "python7",
+                    "command": "pip install <paquete>",
+                    "emoji": "📦",
+                    "details": "Instala un paquete usando pip."
+                },
+                {
+                    "id": "python8",
+                    "command": "with open(<archivo>, '<modo>') as <variable>:\\n    <código>",
+                    "emoji": "📂",
+                    "details": "Maneja archivos (lectura/escritura) de forma segura."
+                },
+                {
+                    "id": "python9",
+                    "command": "try:\\n    <código>\\nexcept <Excepción>:\\n    <código>",
+                    "emoji": "🛡️",
+                    "details": "Maneja excepciones y errores."
+                },
+                {
+                    "id": "python10",
+                    "command": "list(<iterable>)",
+                    "emoji": "📋",
+                    "details": "Convierte un iterable en una lista."
+                },
+                {
+                    "id": "python11",
+                    "command": "lambda <parametros>: <expresión>",
+                    "emoji": "🔄",
+                    "details": "Define una función anónima."
+                },
+                {
+                    "id": "python12",
+                    "command": "class <NombreDeClase>:\\n    def __init__(self, <parametros>):\\n        <código>",
+                    "emoji": "🏛️",
+                    "details": "Define una clase con un método constructor."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Avanzados de Python",
+            "items": [
+                {
+                    "id": "python13",
+                    "command": "import os\\nos.system('<comando>')",
+                    "emoji": "🖥️",
+                    "details": "Ejecuta un comando del sistema operativo."
+                },
+                {
+                    "id": "python14",
+                    "command": "from datetime import datetime\\ndatetime.now()",
+                    "emoji": "📅",
+                    "details": "Obtiene la fecha y hora actuales."
+                },
+                {
+                    "id": "python15",
+                    "command": "decorador\\ndef <función>(<parametros>):\\n    <código>",
+                    "emoji": "🔲",
+                    "details": "Aplica un decorador a una función."
+                },
+                {
+                    "id": "python16",
+                    "command": "yield <valor>",
+                    "emoji": "🔁",
+                    "details": "Genera un valor en una función generadora."
+                },
+                {
+                    "id": "python17",
+                    "command": "async def <función>(<parametros>):\\n    await <código>",
+                    "emoji": "⚡",
+                    "details": "Define una función asincrónica."
+                },
+                {
+                    "id": "python18",
+                    "command": "import threading\\nthreading.Thread(target=<función>).start()",
+                    "emoji": "🧵",
+                    "details": "Crea y ejecuta un nuevo hilo."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Básicos de Java",
+            "items": [
+                {
+                    "id": "java1",
+                    "command": "java -version",
+                    "emoji": "🔢",
+                    "details": "Muestra la versión de Java instalada."
+                },
+                {
+                    "id": "java2",
+                    "command": "javac <archivo>.java",
+                    "emoji": "🔨",
+                    "details": "Compila un archivo Java."
+                },
+                {
+                    "id": "java3",
+                    "command": "java <clase>",
+                    "emoji": "▶️",
+                    "details": "Ejecuta una clase Java."
+                },
+                {
+                    "id": "java4",
+                    "command": "javap <clase>",
+                    "emoji": "🔍",
+                    "details": "Muestra la información de depuración de una clase compilada."
+                },
+                {
+                    "id": "java5",
+                    "command": "jar cf <archivo>.jar <archivo>.class",
+                    "emoji": "📦",
+                    "details": "Crea un archivo JAR a partir de archivos de clase."
+                },
+                {
+                    "id": "java6",
+                    "command": "jar tf <archivo>.jar",
+                    "emoji": "📋",
+                    "details": "Lista el contenido de un archivo JAR."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Medios de Java",
+            "items": [
+                {
+                    "id": "java7",
+                    "command": "javac -d <directorio> <archivo>.java",
+                    "emoji": "🗂️",
+                    "details": "Compila un archivo Java y coloca los archivos de clase en el directorio especificado."
+                },
+                {
+                    "id": "java8",
+                    "command": "java -classpath <ruta> <clase>",
+                    "emoji": "🛤️",
+                    "details": "Especifica el classpath para la ejecución de una clase Java."
+                },
+                {
+                    "id": "java9",
+                    "command": "javadoc -d <directorio> <archivo>.java",
+                    "emoji": "📜",
+                    "details": "Genera documentación API en formato HTML a partir de comentarios en el código fuente."
+                },
+                {
+                    "id": "java10",
+                    "command": "jar cvf <archivo>.jar <directorio>",
+                    "emoji": "🗃️",
+                    "details": "Crea un archivo JAR a partir de un directorio completo, incluyendo subdirectorios."
+                },
+                {
+                    "id": "java11",
+                    "command": "javac -Xlint:<opción> <archivo>.java",
+                    "emoji": "⚠️",
+                    "details": "Activa advertencias específicas del compilador."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Avanzados de Java",
+            "items": [
+                {
+                    "id": "java12",
+                    "command": "jdb <opciones> <clase>",
+                    "emoji": "🐞",
+                    "details": "Inicia el depurador de Java para la depuración de programas Java."
+                },
+                {
+                    "id": "java13",
+                    "command": "java -Xmx<size> -Xms<size> <clase>",
+                    "emoji": "🧠",
+                    "details": "Configura el tamaño máximo y mínimo de la memoria heap para la máquina virtual de Java."
+                },
+                {
+                    "id": "java14",
+                    "command": "jps",
+                    "emoji": "📊",
+                    "details": "Muestra una lista de los procesos de Java que se están ejecutando en el sistema."
+                },
+                {
+                    "id": "java15",
+                    "command": "jstat -gc <pid>",
+                    "emoji": "📈",
+                    "details": "Muestra estadísticas de recolección de basura para el proceso de Java con el identificador de proceso <pid>."
+                },
+                {
+                    "id": "java16",
+                    "command": "jmap -dump:live,format=b,file=<archivo>.hprof <pid>",
+                    "emoji": "🗃️",
+                    "details": "Genera un volcado de heap de un proceso de Java para análisis de memoria."
+                },
+                {
+                    "id": "java17",
+                    "command": "jstack <pid>",
+                    "emoji": "🔄",
+                    "details": "Muestra el stack trace de los hilos de un proceso Java."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Básicos de Kubernetes",
+            "items": [
+                {
+                    "id": "k8s1",
+                    "command": "kubectl version",
+                    "emoji": "🔢",
+                    "details": "Muestra la versión de Kubernetes instalada."
+                },
+                {
+                    "id": "k8s2",
+                    "command": "kubectl get pods",
+                    "emoji": "🔍",
+                    "details": "Lista todos los pods en el clúster."
+                },
+                {
+                    "id": "k8s3",
+                    "command": "kubectl create -f <archivo>.yaml",
+                    "emoji": "🆕",
+                    "details": "Crea un recurso de Kubernetes a partir de un archivo YAML."
+                },
+                {
+                    "id": "k8s4",
+                    "command": "kubectl delete -f <archivo>.yaml",
+                    "emoji": "❌",
+                    "details": "Elimina un recurso de Kubernetes a partir de un archivo YAML."
+                },
+                {
+                    "id": "k8s5",
+                    "command": "kubectl logs <pod>",
+                    "emoji": "📜",
+                    "details": "Muestra los registros de un pod."
+                },
+                {
+                    "id": "k8s6",
+                    "command": "kubectl exec -it <pod> -- /bin/bash",
+                    "emoji": "🔧",
+                    "details": "Inicia una sesión interactiva de bash en un pod."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Medios de Kubernetes",
+            "items": [
+                {
+                    "id": "k8s7",
+                    "command": "kubectl get services",
+                    "emoji": "🔗",
+                    "details": "Lista todos los servicios en el clúster."
+                },
+                {
+                    "id": "k8s8",
+                    "command": "kubectl describe pod <pod>",
+                    "emoji": "📋",
+                    "details": "Muestra detalles sobre un pod específico."
+                },
+                {
+                    "id": "k8s9",
+                    "command": "kubectl scale deployment <deployment> --replicas=<número>",
+                    "emoji": "📈",
+                    "details": "Escala el número de réplicas de un deployment."
+                },
+                {
+                    "id": "k8s10",
+                    "command": "kubectl apply -f <archivo>.yaml",
+                    "emoji": "🔄",
+                    "details": "Aplica cambios a un recurso existente a partir de un archivo YAML."
+                },
+                {
+                    "id": "k8s11",
+                    "command": "kubectl rollout status deployment/<deployment>",
+                    "emoji": "🔄",
+                    "details": "Muestra el estado de la implementación de un deployment."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Avanzados de Kubernetes",
+            "items": [
+                {
+                    "id": "k8s12",
+                    "command": "kubectl get nodes",
+                    "emoji": "🖥️",
+                    "details": "Lista todos los nodos en el clúster."
+                },
+                {
+                    "id": "k8s13",
+                    "command": "kubectl top pod",
+                    "emoji": "📊",
+                    "details": "Muestra el uso de recursos de los pods."
+                },
+                {
+                    "id": "k8s14",
+                    "command": "kubectl port-forward <pod> <puerto_local>:<puerto_pod>",
+                    "emoji": "🔄",
+                    "details": "Reenvía un puerto local a un puerto en un pod."
+                },
+                {
+                    "id": "k8s15",
+                    "command": "kubectl get configmap",
+                    "emoji": "⚙️",
+                    "details": "Lista todos los ConfigMaps en el clúster."
+                },
+                {
+                    "id": "k8s16",
+                    "command": "kubectl create secret generic <nombre> --from-literal=<clave>=<valor>",
+                    "emoji": "🔐",
+                    "details": "Crea un Secret de Kubernetes a partir de un literal."
+                },
+                {
+                    "id": "k8s17",
+                    "command": "kubectl get pvc",
+                    "emoji": "💾",
+                    "details": "Lista todos los PersistentVolumeClaims en el clúster."
+                }
+            ]
+        },
+        {
+                    "section": "Comandos Básicos de Terraform",
+                    "items": [
+                        {
+                            "id": "terraform1",
+                            "command": "terraform --version",
+                            "emoji": "🔢",
+                            "details": "Muestra la versión de Terraform instalada."
+                        },
+                        {
+                            "id": "terraform2",
+                            "command": "terraform init",
+                            "emoji": "🚀",
+                            "details": "Inicializa un directorio de trabajo de Terraform."
+                        },
+                        {
+                            "id": "terraform3",
+                            "command": "terraform plan",
+                            "emoji": "🔍",
+                            "details": "Muestra un plan de ejecución de los cambios."
+                        },
+                        {
+                            "id": "terraform4",
+                            "command": "terraform apply",
+                            "emoji": "▶️",
+                            "details": "Aplica los cambios definidos en los archivos de configuración."
+                        },
+                        {
+                            "id": "terraform5",
+                            "command": "terraform destroy",
+                            "emoji": "🗑️",
+                            "details": "Destruye los recursos creados por Terraform."
+                        },
+                        {
+                            "id": "terraform6",
+                            "command": "terraform validate",
+                            "emoji": "✔️",
+                            "details": "Valida los archivos de configuración de Terraform."
+                        }
+                    ]
+        },
+        {
+            "section": "Comandos Intermedios de Terraform",
+            "items": [
+                {
+                    "id": "terraform7",
+                    "command": "terraform fmt",
+                    "emoji": "📜",
+                    "details": "Formatea los archivos de configuración de Terraform."
+                },
+                {
+                    "id": "terraform8",
+                    "command": "terraform show",
+                    "emoji": "👁️",
+                    "details": "Muestra el estado actual de los recursos en Terraform."
+                },
+                {
+                    "id": "terraform9",
+                    "command": "terraform refresh",
+                    "emoji": "🔄",
+                    "details": "Actualiza el estado de Terraform con los valores actuales de los recursos."
+                },
+                {
+                    "id": "terraform10",
+                    "command": "terraform taint",
+                    "emoji": "🔴",
+                    "details": "Marca un recurso para ser recreado en el próximo `apply`."
+                },
+                {
+                    "id": "terraform11",
+                    "command": "terraform untaint",
+                    "emoji": "🟢",
+                    "details": "Elimina la marca de 'tainted' de un recurso."
+                },
+                {
+                    "id": "terraform12",
+                    "command": "terraform workspace list",
+                    "emoji": "💼",
+                    "details": "Lista todos los espacios de trabajo disponibles."
+                },
+                {
+                    "id": "terraform13",
+                    "command": "terraform workspace new <name>",
+                    "emoji": "🆕",
+                    "details": "Crea un nuevo espacio de trabajo con el nombre especificado."
+                },
+                {
+                    "id": "terraform14",
+                    "command": "terraform workspace select <name>",
+                    "emoji": "🔄",
+                    "details": "Cambia al espacio de trabajo especificado."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Avanzados de Terraform",
+            "items": [
+                {
+                    "id": "terraform15",
+                    "command": "terraform state list",
+                    "emoji": "📜",
+                    "details": "Lista todos los recursos en el estado actual."
+                },
+                {
+                    "id": "terraform16",
+                    "command": "terraform state show <resource>",
+                    "emoji": "🔎",
+                    "details": "Muestra detalles sobre un recurso en el estado actual."
+                },
+                {
+                    "id": "terraform17",
+                    "command": "terraform state rm <resource>",
+                    "emoji": "🗑️",
+                    "details": "Elimina un recurso del estado de Terraform sin destruirlo."
+                },
+                {
+                    "id": "terraform18",
+                    "command": "terraform import <address> <id>",
+                    "emoji": "📥",
+                    "details": "Importa un recurso existente al estado de Terraform."
+                },
+                {
+                    "id": "terraform19",
+                    "command": "terraform graph",
+                    "emoji": "📈",
+                    "details": "Genera un gráfico de dependencias entre los recursos."
+                },
+                {
+                    "id": "terraform20",
+                    "command": "terraform workspace delete <name>",
+                    "emoji": "🗑️",
+                    "details": "Elimina un espacio de trabajo especificado."
+                },
+                {
+                    "id": "terraform21",
+                    "command": "terraform output",
+                    "emoji": "📤",
+                    "details": "Muestra los valores de salida definidos en la configuración."
+                },
+                {
+                    "id": "terraform22",
+                    "command": "terraform providers",
+                    "emoji": "📦",
+                    "details": "Muestra información sobre los proveedores utilizados."
+                },
+                {
+                    "id": "terraform23",
+                    "command": "terraform graph -type=plan",
+                    "emoji": "📈",
+                    "details": "Genera un gráfico de dependencias basado en el plan de ejecución."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Básicos de Ansible",
+            "items": [
+                {
+                    "id": "ansible1",
+                    "command": "ansible --version",
+                    "emoji": "🔢",
+                    "details": "Muestra la versión de Ansible instalada."
+                },
+                {
+                    "id": "ansible2",
+                    "command": "ansible <grupo> -m ping",
+                    "emoji": "📡",
+                    "details": "Verifica la conectividad con los hosts del grupo."
+                },
+                {
+                    "id": "ansible3",
+                    "command": "ansible-playbook <archivo>.yml",
+                    "emoji": "▶️",
+                    "details": "Ejecuta un playbook de Ansible."
+                },
+                {
+                    "id": "ansible4",
+                    "command": "ansible-inventory --list",
+                    "emoji": "📋",
+                    "details": "Muestra el inventario de Ansible."
+                },
+                {
+                    "id": "ansible5",
+                    "command": "ansible-galaxy init <rol>",
+                    "emoji": "🆕",
+                    "details": "Crea un nuevo rol de Ansible."
+                },
+                {
+                    "id": "ansible6",
+                    "command": "ansible-playbook --check <archivo>.yml",
+                    "emoji": "🔍",
+                    "details": "Ejecuta un playbook en modo de solo verificación."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Avanzados de Ansible",
+            "items": [
+                {
+                    "id": "ansible7",
+                    "command": "ansible-playbook <archivo>.yml --tags <etiquetas>",
+                    "emoji": "🏷️",
+                    "details": "Ejecuta solo las tareas con las etiquetas especificadas en el playbook."
+                },
+                {
+                    "id": "ansible8",
+                    "command": "ansible-playbook <archivo>.yml --start-at-task='nombre_de_tarea'",
+                    "emoji": "⏭️",
+                    "details": "Inicia la ejecución del playbook desde una tarea específica."
+                },
+                {
+                    "id": "ansible9",
+                    "command": "ansible-playbook <archivo>.yml --limit <grupo>",
+                    "emoji": "🔒",
+                    "details": "Ejecuta el playbook solo en el grupo de hosts especificado."
+                },
+                {
+                    "id": "ansible10",
+                    "command": "ansible-playbook <archivo>.yml --diff",
+                    "emoji": "🔧",
+                    "details": "Muestra las diferencias en los archivos gestionados por Ansible."
+                },
+                {
+                    "id": "ansible11",
+                    "command": "ansible-playbook <archivo>.yml --extra-vars 'var1=value1 var2=value2'",
+                    "emoji": "🛠️",
+                    "details": "Pasa variables adicionales al playbook durante la ejecución."
+                },
+                {
+                    "id": "ansible12",
+                    "command": "ansible-playbook <archivo>.yml --vault-password-file <archivo>",
+                    "emoji": "🔐",
+                    "details": "Especifica el archivo que contiene la contraseña para descifrar datos cifrados con Ansible Vault."
+                },
+                {
+                    "id": "ansible13",
+                    "command": "ansible-playbook <archivo>.yml --inventory-file <inventario>",
+                    "emoji": "📂",
+                    "details": "Especifica un archivo de inventario diferente al predeterminado."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Básicos de Bash",
+            "items": [
+                {
+                    "id": "bash1",
+                    "command": "ls",
+                    "emoji": "📂",
+                    "details": "Lista los archivos y directorios en el directorio actual."
+                },
+                {
+                    "id": "bash2",
+                    "command": "cd <directorio>",
+                    "emoji": "📁",
+                    "details": "Cambia al directorio especificado."
+                },
+                {
+                    "id": "bash3",
+                    "command": "pwd",
+                    "emoji": "📍",
+                    "details": "Muestra el directorio de trabajo actual."
+                },
+                {
+                    "id": "bash4",
+                    "command": "mkdir <directorio>",
+                    "emoji": "🆕",
+                    "details": "Crea un nuevo directorio."
+                },
+                {
+                    "id": "bash5",
+                    "command": "rm <archivo>",
+                    "emoji": "🗑️",
+                    "details": "Elimina un archivo."
+                },
+                {
+                    "id": "bash6",
+                    "command": "cp <origen> <destino>",
+                    "emoji": "📦",
+                    "details": "Copia un archivo o directorio."
+                }
+            ]
+        },
+        {
+            "section": "Comandos de Bash Nivel Medio",
+            "items": [
+                {
+                    "id": "bash7",
+                    "command": "mv <origen> <destino>",
+                    "emoji": "🔄",
+                    "details": "Mueve o renombra archivos o directorios."
+                },
+                {
+                    "id": "bash8",
+                    "command": "touch <archivo>",
+                    "emoji": "✏️",
+                    "details": "Crea un archivo vacío o actualiza la fecha de acceso de un archivo existente."
+                },
+                {
+                    "id": "bash9",
+                    "command": "cat <archivo>",
+                    "emoji": "📜",
+                    "details": "Muestra el contenido de un archivo en la salida estándar."
+                },
+                {
+                    "id": "bash10",
+                    "command": "grep <texto> <archivo>",
+                    "emoji": "🔍",
+                    "details": "Busca una cadena de texto en un archivo y muestra las líneas que coinciden."
+                },
+                {
+                    "id": "bash11",
+                    "command": "find <directorio> -name <nombre>",
+                    "emoji": "🔍",
+                    "details": "Busca archivos y directorios que coincidan con el nombre especificado en el directorio."
+                },
+                {
+                    "id": "bash12",
+                    "command": "chmod <permisos> <archivo>",
+                    "emoji": "🔐",
+                    "details": "Cambia los permisos de un archivo o directorio."
+                }
+            ]
+        },
+        {
+            "section": "Comandos de Bash Nivel Avanzado",
+            "items": [
+                {
+                    "id": "bash13",
+                    "command": "tar -cvf <archivo.tar> <directorio>",
+                    "emoji": "📦",
+                    "details": "Crea un archivo tar comprimido con el contenido del directorio especificado."
+                },
+                {
+                    "id": "bash14",
+                    "command": "grep -r <texto> <directorio>",
+                    "emoji": "🔍",
+                    "details": "Busca recursivamente una cadena de texto en todos los archivos dentro del directorio."
+                },
+                {
+                    "id": "bash15",
+                    "command": "sed 's/<buscar>/<reemplazar>/g' <archivo>",
+                    "emoji": "🔄",
+                    "details": "Reemplaza todas las ocurrencias de una cadena de texto en un archivo con otra cadena."
+                },
+                {
+                    "id": "bash16",
+                    "command": "awk '{print $1}' <archivo>",
+                    "emoji": "📋",
+                    "details": "Imprime la primera columna de un archivo de texto."
+                },
+                {
+                    "id": "bash17",
+                    "command": "ps aux | grep <proceso>",
+                    "emoji": "🔍",
+                    "details": "Muestra información sobre los procesos en ejecución que coinciden con el nombre del proceso especificado."
+                },
+                {
+                    "id": "bash18",
+                    "command": "chmod 755 <archivo>",
+                    "emoji": "🔐",
+                    "details": "Establece permisos específicos para el archivo o directorio (rwxr-xr-x)."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Básicos de PowerShell",
+            "items": [
+                {
+                    "id": "ps1",
+                    "command": "Get-Command",
+                    "emoji": "🔍",
+                    "details": "Lista todos los comandos disponibles en PowerShell."
+                },
+                {
+                    "id": "ps2",
+                    "command": "Get-Help <comando>",
+                    "emoji": "❓",
+                    "details": "Muestra la ayuda para un comando específico."
+                },
+                {
+                    "id": "ps3",
+                    "command": "Get-Process",
+                    "emoji": "🔍",
+                    "details": "Muestra una lista de procesos en ejecución."
+                },
+                {
+                    "id": "ps4",
+                    "command": "Start-Service <nombre>",
+                    "emoji": "▶️",
+                    "details": "Inicia un servicio."
+                },
+                {
+                    "id": "ps5",
+                    "command": "Stop-Service <nombre>",
+                    "emoji": "🛑",
+                    "details": "Detiene un servicio."
+                },
+                {
+                    "id": "ps6",
+                    "command": "Set-ExecutionPolicy <política>",
+                    "emoji": "🔧",
+                    "details": "Establece la política de ejecución de scripts en PowerShell."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Medios de PowerShell",
+            "items": [
+                {
+                    "id": "ps7",
+                    "command": "Get-EventLog -LogName <nombre del registro>",
+                    "emoji": "📜",
+                    "details": "Muestra eventos del registro especificado."
+                },
+                {
+                    "id": "ps8",
+                    "command": "Get-Service",
+                    "emoji": "🔍",
+                    "details": "Lista todos los servicios disponibles en el sistema."
+                },
+                {
+                    "id": "ps9",
+                    "command": "Set-ItemProperty -Path <ruta> -Name <propiedad> -Value <valor>",
+                    "emoji": "⚙️",
+                    "details": "Establece una propiedad en un ítem especificado."
+                },
+                {
+                    "id": "ps10",
+                    "command": "Copy-Item -Path <origen> -Destination <destino>",
+                    "emoji": "📦",
+                    "details": "Copia un ítem de una ubicación a otra."
+                },
+                {
+                    "id": "ps11",
+                    "command": "Remove-Item -Path <ruta>",
+                    "emoji": "🗑️",
+                    "details": "Elimina un ítem especificado."
+                },
+                {
+                    "id": "ps12",
+                    "command": "Invoke-Command -ScriptBlock { <comando> }",
+                    "emoji": "🔄",
+                    "details": "Ejecuta un bloque de comandos en el contexto de una sesión remota o local."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Avanzados de PowerShell",
+            "items": [
+                {
+                    "id": "ps13",
+                    "command": "New-PSSession -ComputerName <nombre del equipo> -Credential <credenciales>",
+                    "emoji": "🖥️",
+                    "details": "Crea una nueva sesión de PowerShell remota."
+                },
+                {
+                    "id": "ps14",
+                    "command": "Import-Module <nombre del módulo>",
+                    "emoji": "📥",
+                    "details": "Importa un módulo de PowerShell para usar sus comandos."
+                },
+                {
+                    "id": "ps15",
+                    "command": "Export-Csv -Path <ruta> -NoTypeInformation",
+                    "emoji": "📊",
+                    "details": "Exporta datos a un archivo CSV."
+                },
+                {
+                    "id": "ps16",
+                    "command": "Get-WmiObject -Class <clase> -Namespace <espacio de nombres>",
+                    "emoji": "🖥️",
+                    "details": "Obtiene información de WMI sobre una clase específica."
+                },
+                {
+                    "id": "ps17",
+                    "command": "Invoke-RestMethod -Uri <URL> -Method <método> -Body <cuerpo>",
+                    "emoji": "🌐",
+                    "details": "Invoca un método REST en una API web."
+                },
+                {
+                    "id": "ps18",
+                    "command": "Start-Job -ScriptBlock { <comando> }",
+                    "emoji": "🔧",
+                    "details": "Inicia un trabajo en segundo plano con el bloque de script especificado."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Básicos de Vim",
+            "items": [
+                {
+                    "id": "vim1",
+                    "command": "vim <archivo>",
+                    "emoji": "🖥️",
+                    "details": "Abre un archivo en el editor Vim."
+                },
+                {
+                    "id": "vim2",
+                    "command": "i",
+                    "emoji": "✏️",
+                    "details": "Entra en el modo de inserción."
+                },
+                {
+                    "id": "vim3",
+                    "command": "Esc",
+                    "emoji": "🚪",
+                    "details": "Sale del modo de inserción y vuelve al modo normal."
+                },
+                {
+                    "id": "vim4",
+                    "command": ":w",
+                    "emoji": "💾",
+                    "details": "Guarda el archivo."
+                },
+                {
+                    "id": "vim5",
+                    "command": ":q",
+                    "emoji": "🚪",
+                    "details": "Cierra Vim."
+                },
+                {
+                    "id": "vim6",
+                    "command": ":wq",
+                    "emoji": "💾🚪",
+                    "details": "Guarda el archivo y cierra Vim."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Intermedios de Vim",
+            "items": [
+                {
+                    "id": "vim7",
+                    "command": "u",
+                    "emoji": "↩️",
+                    "details": "Deshace la última acción."
+                },
+                {
+                    "id": "vim8",
+                    "command": "Ctrl + r",
+                    "emoji": "🔁",
+                    "details": "Rehace la última acción deshecha."
+                },
+                {
+                    "id": "vim9",
+                    "command": ":e <archivo>",
+                    "emoji": "📂",
+                    "details": "Abre un nuevo archivo."
+                },
+                {
+                    "id": "vim10",
+                    "command": "dd",
+                    "emoji": "✂️",
+                    "details": "Elimina la línea actual y la coloca en el portapapeles."
+                },
+                {
+                    "id": "vim11",
+                    "command": "yy",
+                    "emoji": "📋",
+                    "details": "Copia la línea actual en el portapapeles."
+                },
+                {
+                    "id": "vim12",
+                    "command": "p",
+                    "emoji": "📥",
+                    "details": "Pega el contenido del portapapeles después de la posición actual del cursor."
+                },
+                {
+                    "id": "vim13",
+                    "command": ":set number",
+                    "emoji": "🔢",
+                    "details": "Muestra los números de línea en el margen izquierdo."
+                },
+                {
+                    "id": "vim14",
+                    "command": ":set nonumber",
+                    "emoji": "🔢❌",
+                    "details": "Oculta los números de línea."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Avanzados de Vim",
+            "items": [
+                {
+                    "id": "vim15",
+                    "command": ":split <archivo>",
+                    "emoji": "🖥️➗",
+                    "details": "Divide la ventana actual en dos y abre el archivo en la nueva ventana."
+                },
+                {
+                    "id": "vim16",
+                    "command": ":vsplit <archivo>",
+                    "emoji": "🖥️🔲",
+                    "details": "Divide la ventana actual verticalmente y abre el archivo en la nueva ventana."
+                },
+                {
+                    "id": "vim17",
+                    "command": ":tabnew <archivo>",
+                    "emoji": "🗂️",
+                    "details": "Abre un nuevo archivo en una nueva pestaña."
+                },
+                {
+                    "id": "vim18",
+                    "command": ":b <número>",
+                    "emoji": "📑",
+                    "details": "Cambia al buffer número <número>."
+                },
+                {
+                    "id": "vim19",
+                    "command": ":buffers",
+                    "emoji": "📑🔎",
+                    "details": "Muestra la lista de buffers abiertos."
+                },
+                {
+                    "id": "vim20",
+                    "command": ":w !sudo tee %",
+                    "emoji": "🔐💾",
+                    "details": "Guarda el archivo con permisos de superusuario."
+                },
+                {
+                    "id": "vim21",
+                    "command": "/<texto>",
+                    "emoji": "🔍",
+                    "details": "Busca el <texto> en el archivo."
+                },
+                {
+                    "id": "vim22",
+                    "command": ":%s/<buscar>/<reemplazar>/g",
+                    "emoji": "🔄",
+                    "details": "Reemplaza todas las ocurrencias de <buscar> con <reemplazar> en el archivo."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Básicos de Emacs",
+            "items": [
+                {
+                    "id": "emacs1",
+                    "command": "emacs <archivo>",
+                    "emoji": "🖥️",
+                    "details": "Abre un archivo en el editor Emacs."
+                },
+                {
+                    "id": "emacs2",
+                    "command": "C-x C-s",
+                    "emoji": "💾",
+                    "details": "Guarda el archivo."
+                },
+                {
+                    "id": "emacs3",
+                    "command": "C-x C-c",
+                    "emoji": "🚪",
+                    "details": "Cierra Emacs."
+                },
+                {
+                    "id": "emacs4",
+                    "command": "C-space",
+                    "emoji": "📍",
+                    "details": "Establece el punto de marca para seleccionar texto."
+                },
+                {
+                    "id": "emacs5",
+                    "command": "M-w",
+                    "emoji": "📋",
+                    "details": "Copia el texto seleccionado al portapapeles."
+                },
+                {
+                    "id": "emacs6",
+                    "command": "C-y",
+                    "emoji": "📥",
+                    "details": "Pega el texto copiado del portapapeles."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Medios de Emacs",
+            "items": [
+                {
+                    "id": "emacs7",
+                    "command": "C-x b",
+                    "emoji": "📂",
+                    "details": "Cambia al buffer especificado."
+                },
+                {
+                    "id": "emacs8",
+                    "command": "C-x C-f",
+                    "emoji": "📁",
+                    "details": "Abre un nuevo archivo en un buffer."
+                },
+                {
+                    "id": "emacs9",
+                    "command": "C-k",
+                    "emoji": "✂️",
+                    "details": "Corta la línea desde el punto hasta el final."
+                },
+                {
+                    "id": "emacs10",
+                    "command": "C-g",
+                    "emoji": "❌",
+                    "details": "Cancela el comando actual."
+                },
+                {
+                    "id": "emacs11",
+                    "command": "M-x",
+                    "emoji": "🔍",
+                    "details": "Ejecuta un comando Emacs por nombre."
+                },
+                {
+                    "id": "emacs12",
+                    "command": "C-s",
+                    "emoji": "🔎",
+                    "details": "Inicia la búsqueda incremental hacia adelante."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Avanzados de Emacs",
+            "items": [
+                {
+                    "id": "emacs13",
+                    "command": "M-%",
+                    "emoji": "🔄",
+                    "details": "Inicia una búsqueda y reemplazo."
+                },
+                {
+                    "id": "emacs14",
+                    "command": "C-x 2",
+                    "emoji": "📏",
+                    "details": "Divide la ventana actual horizontalmente."
+                },
+                {
+                    "id": "emacs15",
+                    "command": "C-x 3",
+                    "emoji": "📐",
+                    "details": "Divide la ventana actual verticalmente."
+                },
+                {
+                    "id": "emacs16",
+                    "command": "C-x b",
+                    "emoji": "🔄",
+                    "details": "Cambia entre buffers."
+                },
+                {
+                    "id": "emacs17",
+                    "command": "M-x describe-function",
+                    "emoji": "ℹ️",
+                    "details": "Muestra información sobre una función."
+                },
+                {
+                    "id": "emacs18",
+                    "command": "C-x r m",
+                    "emoji": "🔖",
+                    "details": "Establece un marcador en el punto actual."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Básicos de SQL",
+            "items": [
+                {
+                    "id": "sql1",
+                    "command": "SELECT * FROM <tabla>;",
+                    "emoji": "🔍",
+                    "details": "Selecciona todos los registros de una tabla."
+                },
+                {
+                    "id": "sql2",
+                    "command": "INSERT INTO <tabla> (columna1, columna2) VALUES (valor1, valor2);",
+                    "emoji": "➕",
+                    "details": "Inserta un nuevo registro en una tabla."
+                },
+                {
+                    "id": "sql3",
+                    "command": "UPDATE <tabla> SET columna1 = valor1 WHERE condición;",
+                    "emoji": "🔄",
+                    "details": "Actualiza registros existentes en una tabla."
+                },
+                {
+                    "id": "sql4",
+                    "command": "DELETE FROM <tabla> WHERE condición;",
+                    "emoji": "🗑️",
+                    "details": "Elimina registros de una tabla."
+                },
+                {
+                    "id": "sql5",
+                    "command": "CREATE TABLE <tabla> (columna1 tipo, columna2 tipo);",
+                    "emoji": "🆕",
+                    "details": "Crea una nueva tabla."
+                },
+                {
+                    "id": "sql6",
+                    "command": "DROP TABLE <tabla>;",
+                    "emoji": "❌",
+                    "details": "Elimina una tabla."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Medios de SQL",
+            "items": [
+                {
+                    "id": "sql7",
+                    "command": "ALTER TABLE <tabla> ADD columna tipo;",
+                    "emoji": "🔧",
+                    "details": "Añade una nueva columna a una tabla existente."
+                },
+                {
+                    "id": "sql8",
+                    "command": "ALTER TABLE <tabla> DROP COLUMN columna;",
+                    "emoji": "🛠️",
+                    "details": "Elimina una columna de una tabla existente."
+                },
+                {
+                    "id": "sql9",
+                    "command": "ALTER TABLE <tabla> MODIFY COLUMN columna tipo;",
+                    "emoji": "🛠️",
+                    "details": "Modifica el tipo de datos de una columna existente."
+                },
+                {
+                    "id": "sql10",
+                    "command": "CREATE INDEX idx_columna ON <tabla> (columna);",
+                    "emoji": "📈",
+                    "details": "Crea un índice para una columna, mejorando la velocidad de consulta."
+                },
+                {
+                    "id": "sql11",
+                    "command": "SELECT columna1, columna2 FROM <tabla> WHERE condición ORDER BY columna1 ASC;",
+                    "emoji": "📊",
+                    "details": "Selecciona registros y los ordena según una columna."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Avanzados de SQL",
+            "items": [
+                {
+                    "id": "sql12",
+                    "command": "SELECT columna1, COUNT(*) FROM <tabla> GROUP BY columna1;",
+                    "emoji": "📊",
+                    "details": "Agrupa registros por una columna y cuenta la cantidad de registros en cada grupo."
+                },
+                {
+                    "id": "sql13",
+                    "command": "SELECT columna1, columna2 FROM <tabla1> JOIN <tabla2> ON <tabla1>.columna = <tabla2>.columna;",
+                    "emoji": "🔗",
+                    "details": "Realiza una unión entre dos tablas basada en una condición."
+                },
+                {
+                    "id": "sql14",
+                    "command": "WITH cte AS (SELECT columna1, SUM(columna2) FROM <tabla> GROUP BY columna1) SELECT * FROM cte;",
+                    "emoji": "🔄",
+                    "details": "Utiliza una CTE (Common Table Expression) para simplificar consultas complejas."
+                },
+                {
+                    "id": "sql15",
+                    "command": "CREATE VIEW vista_nombre AS SELECT columna1, columna2 FROM <tabla> WHERE condición;",
+                    "emoji": "👁️",
+                    "details": "Crea una vista que actúa como una tabla virtual con los resultados de una consulta."
+                },
+                {
+                    "id": "sql16",
+                    "command": "BEGIN TRANSACTION; UPDATE <tabla> SET columna = valor WHERE condición; COMMIT;",
+                    "emoji": "🔄",
+                    "details": "Inicia una transacción, realiza una actualización y confirma los cambios."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Básicos de Node.js",
+            "items": [
+                {
+                    "id": "node1",
+                    "command": "node --version",
+                    "emoji": "🔢",
+                    "details": "Muestra la versión de Node.js instalada."
+                },
+                {
+                    "id": "node2",
+                    "command": "node <archivo>.js",
+                    "emoji": "▶️",
+                    "details": "Ejecuta un archivo JavaScript con Node.js."
+                },
+                {
+                    "id": "node3",
+                    "command": "npm install <paquete>",
+                    "emoji": "⬇️",
+                    "details": "Instala un paquete de Node.js."
+                },
+                {
+                    "id": "node4",
+                    "command": "npm update",
+                    "emoji": "🔄",
+                    "details": "Actualiza los paquetes de Node.js."
+                },
+                {
+                    "id": "node5",
+                    "command": "npm uninstall <paquete>",
+                    "emoji": "🗑️",
+                    "details": "Elimina un paquete de Node.js."
+                },
+                {
+                    "id": "node6",
+                    "command": "npm list",
+                    "emoji": "📋",
+                    "details": "Muestra los paquetes instalados."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Medios de Node.js",
+            "items": [
+                {
+                    "id": "node7",
+                    "command": "node --inspect <archivo>.js",
+                    "emoji": "🔍",
+                    "details": "Inicia la depuración del archivo JavaScript con el inspector de Node.js."
+                },
+                {
+                    "id": "node8",
+                    "command": "npm run <script>",
+                    "emoji": "▶️",
+                    "details": "Ejecuta un script definido en el archivo package.json."
+                },
+                {
+                    "id": "node9",
+                    "command": "npm outdated",
+                    "emoji": "📉",
+                    "details": "Muestra una lista de paquetes desactualizados."
+                },
+                {
+                    "id": "node10",
+                    "command": "npm config list",
+                    "emoji": "🛠️",
+                    "details": "Muestra la configuración actual de npm."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Avanzados de Node.js",
+            "items": [
+                {
+                    "id": "node11",
+                    "command": "node -r <módulo> <archivo>.js",
+                    "emoji": "🔌",
+                    "details": "Carga un módulo antes de ejecutar el archivo JavaScript."
+                },
+                {
+                    "id": "node12",
+                    "command": "npm link",
+                    "emoji": "🔗",
+                    "details": "Crea un enlace simbólico global a un paquete local."
+                },
+                {
+                    "id": "node13",
+                    "command": "npm dedupe",
+                    "emoji": "🔄",
+                    "details": "Elimina duplicados de dependencias en el directorio node_modules."
+                },
+                {
+                    "id": "node14",
+                    "command": "npm ci",
+                    "emoji": "🧩",
+                    "details": "Instala dependencias basadas en package-lock.json, ideal para CI/CD."
+                },
+                {
+                    "id": "node15",
+                    "command": "npm audit",
+                    "emoji": "🔍",
+                    "details": "Realiza un análisis de seguridad en las dependencias instaladas."
+                }
+            ]
+        }        
+    ]
+}
