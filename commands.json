@@ -23,7 +23,7 @@
                 },
                 {
                     "id": "git4",
-                    "command":"git commit -m 'mensaje'",
+                    "command": "git commit -m 'mensaje'",
                     "emoji": "✉️",
                     "details": "Crea un nuevo commit con los archivos en el área de preparación y un mensaje."
                 },
@@ -95,7 +95,7 @@
                 },
                 {
                     "id": "git16",
-                    "command":"git tag -a <etiqueta> -m 'mensaje'",
+                    "command": "git tag -a <etiqueta> -m 'mensaje'",
                     "emoji": "📝",
                     "details": "Crea una etiqueta anotada con un mensaje."
                 },
@@ -184,7 +184,7 @@
                 },
                 {
                     "id": "git30",
-                    "command":"git filter-branch --tree-filter 'comando' HEAD",
+                    "command": "git filter-branch --tree-filter 'comando' HEAD",
                     "emoji": "🔧",
                     "details": "Reescribe el historial de commits para aplicar un comando a cada árbol de commit, útil para eliminar archivos grandes o sensibles."
                 },
@@ -192,7 +192,7 @@
                     "id": "git31",
                     "command": "git bisect start <bad> <good>",
                     "emoji": "🔍",
-                    "details":"Inicia una búsqueda binaria para identificar el commit que introdujo un error entre dos commits conocidos como 'bueno' y 'malo'."
+                    "details": "Inicia una búsqueda binaria para identificar el commit que introdujo un error entre dos commits conocidos como 'bueno' y 'malo'."
                 },
                 {
                     "id": "git32",
@@ -510,148 +510,148 @@
                     "command": "reboot",
                     "emoji": "🔄",
                     "details": "Reinicia el sistema."
+                }
+            ]
+        },
+        {
+            "section": "Comandos de Nivel Medio",
+            "items": [
+                {
+                    "id": "linux49",
+                    "command": "find <directorio> -type <tipo>",
+                    "emoji": "🔍",
+                    "details": "Busca archivos y directorios de un tipo específico en un directorio."
                 },
                 {
-                    "section": "Comandos de Nivel Medio",
-                    "items": [
-                        {
-                            "id": "linux49",
-                            "command": "find <directorio> -type <tipo>",
-                            "emoji": "🔍",
-                            "details": "Busca archivos y directorios de un tipo específico en un directorio."
-                        },
-                        {
-                            "id": "linux50",
-                            "command": "grep -r <patrón> <directorio>",
-                            "emoji": "🔎",
-                            "details": "Busca un patrón recursivamente en todos los archivos de un directorio."
-                        },
-                        {
-                            "id": "linux51",
-                            "command": "chmod -R <permisos> <directorio>",
-                            "emoji": "🔐",
-                            "details": "Cambia los permisos de un directorio y su contenido de forma recursiva."
-                        },
-                        {
-                            "id": "linux52",
-                            "command": "du -sh <directorio>",
-                            "emoji": "📊",
-                            "details": "Muestra el tamaño total de un directorio de forma resumida."
-                        },
-                        {
-                            "id": "linux53",
-                            "command": "ls -la",
-                            "emoji": "📜",
-                            "details": "Lista el contenido de un directorio con detalles y archivos ocultos."
-                        },
-                        {
-                            "id": "linux54",
-                            "command": "top -u <usuario>",
-                            "emoji": "📊",
-                            "details": "Muestra los procesos de un usuario específico en tiempo real."
-                        },
-                        {
-                            "id": "linux55",
-                            "command": "df -h",
-                            "emoji": "💾",
-                            "details": "Muestra el uso del espacio en disco en formato legible."
-                        },
-                        {
-                            "id": "linux56",
-                            "command": "tar -cvzf <archivo>.tar.gz <directorio>",
-                            "emoji": "📦",
-                            "details": "Crea un archivo tar comprimido con gzip."
-                        },
-                        {
-                            "id": "linux57",
-                            "command": "tar -xvzf <archivo>.tar.gz",
-                            "emoji": "📂",
-                            "details": "Extrae el contenido de un archivo tar comprimido con gzip."
-                        }
-                    ]
+                    "id": "linux50",
+                    "command": "grep -r <patrón> <directorio>",
+                    "emoji": "🔎",
+                    "details": "Busca un patrón recursivamente en todos los archivos de un directorio."
                 },
                 {
-                    "section": "Comandos Avanzados",
-                    "items": [
-                        {
-                            "id": "linux58",
-                            "command": "awk '{print $1}' <archivo>",
-                            "emoji": "📏",
-                            "details": "Procesa y analiza datos en archivos o entradas."
-                        },
-                        {
-                            "id": "linux59",
-                            "command": "sed 's/patrón/reemplazo/' <archivo>",
-                            "emoji": "✏️",
-                            "details": "Realiza sustituciones en el contenido de un archivo."
-                        },
-                        {
-                            "id": "linux60",
-                            "command": "grep -P '<expresión regular>' <archivo>",
-                            "emoji": "🔎",
-                            "details": "Busca patrones con expresiones regulares avanzadas en un archivo."
-                        },
-                        {
-                            "id": "linux61",
-                            "command": "find <directorio> -exec <comando> {} \\;",
-                            "emoji": "🔄",
-                            "details": "Ejecuta un comando en cada archivo encontrado por `find`."
-                        },
-                        {
-                            "id": "linux62",
-                            "command": "strace <comando>",
-                            "emoji": "🔍",
-                            "details": "Rastrea las llamadas al sistema realizadas por un comando."
-                        },
-                        {
-                            "id": "linux63",
-                            "command": "lsof",
-                            "emoji": "📂",
-                            "details": "Lista archivos abiertos y los procesos que los han abierto."
-                        },
-                        {
-                            "id": "linux64",
-                            "command": "netstat -tuln",
-                            "emoji": "🌐",
-                            "details": "Muestra información sobre las conexiones de red y puertos abiertos."
-                        },
-                        {
-                            "id": "linux65",
-                            "command": "tcpdump -i <interfaz>",
-                            "emoji": "📡",
-                            "details": "Captura y muestra paquetes de red en una interfaz específica."
-                        },
-                        {
-                            "id": "linux66",
-                            "command": "vmstat",
-                            "emoji": "🖥️",
-                            "details": "Muestra estadísticas del sistema sobre procesos, memoria, paginación y más."
-                        },
-                        {
-                            "id": "linux67",
-                            "command": "iostat",
-                            "emoji": "📈",
-                            "details": "Muestra estadísticas sobre el uso del CPU y del disco."
-                        },
-                        {
-                            "id": "linux68",
-                            "command": "dd if=<archivo> of=<dispositivo> bs=<tamaño>",
-                            "emoji": "🔄",
-                            "details": "Copia y convierte archivos y dispositivos."
-                        },
-                        {
-                            "id": "linux69",
-                            "command": "chroot <directorio>",
-                            "emoji": "🗂️",
-                            "details": "Cambia el directorio raíz del proceso actual a un nuevo directorio."
-                        },
-                        {
-                            "id": "linux70",
-                            "command": "docker run <imagen>",
-                            "emoji": "🐳",
-                            "details": "Ejecuta un contenedor Docker basado en una imagen."
-                        }
-                    ]
+                    "id": "linux51",
+                    "command": "chmod -R <permisos> <directorio>",
+                    "emoji": "🔐",
+                    "details": "Cambia los permisos de un directorio y su contenido de forma recursiva."
+                },
+                {
+                    "id": "linux52",
+                    "command": "du -sh <directorio>",
+                    "emoji": "📊",
+                    "details": "Muestra el tamaño total de un directorio de forma resumida."
+                },
+                {
+                    "id": "linux53",
+                    "command": "ls -la",
+                    "emoji": "📜",
+                    "details": "Lista el contenido de un directorio con detalles y archivos ocultos."
+                },
+                {
+                    "id": "linux54",
+                    "command": "top -u <usuario>",
+                    "emoji": "📊",
+                    "details": "Muestra los procesos de un usuario específico en tiempo real."
+                },
+                {
+                    "id": "linux55",
+                    "command": "df -h",
+                    "emoji": "💾",
+                    "details": "Muestra el uso del espacio en disco en formato legible."
+                },
+                {
+                    "id": "linux56",
+                    "command": "tar -cvzf <archivo>.tar.gz <directorio>",
+                    "emoji": "📦",
+                    "details": "Crea un archivo tar comprimido con gzip."
+                },
+                {
+                    "id": "linux57",
+                    "command": "tar -xvzf <archivo>.tar.gz",
+                    "emoji": "📂",
+                    "details": "Extrae el contenido de un archivo tar comprimido con gzip."
+                }
+            ]
+        },
+        {
+            "section": "Comandos Avanzados Linux",
+            "items": [
+                {
+                    "id": "linux58",
+                    "command": "awk '{print $1}' <archivo>",
+                    "emoji": "📏",
+                    "details": "Procesa y analiza datos en archivos o entradas."
+                },
+                {
+                    "id": "linux59",
+                    "command": "sed 's/patrón/reemplazo/' <archivo>",
+                    "emoji": "✏️",
+                    "details": "Realiza sustituciones en el contenido de un archivo."
+                },
+                {
+                    "id": "linux60",
+                    "command": "grep -P '<expresión regular>' <archivo>",
+                    "emoji": "🔎",
+                    "details": "Busca patrones con expresiones regulares avanzadas en un archivo."
+                },
+                {
+                    "id": "linux61",
+                    "command": "find <directorio> -exec <comando> {} \\;",
+                    "emoji": "🔄",
+                    "details": "Ejecuta un comando en cada archivo encontrado por `find`."
+                },
+                {
+                    "id": "linux62",
+                    "command": "strace <comando>",
+                    "emoji": "🔍",
+                    "details": "Rastrea las llamadas al sistema realizadas por un comando."
+                },
+                {
+                    "id": "linux63",
+                    "command": "lsof",
+                    "emoji": "📂",
+                    "details": "Lista archivos abiertos y los procesos que los han abierto."
+                },
+                {
+                    "id": "linux64",
+                    "command": "netstat -tuln",
+                    "emoji": "🌐",
+                    "details": "Muestra información sobre las conexiones de red y puertos abiertos."
+                },
+                {
+                    "id": "linux65",
+                    "command": "tcpdump -i <interfaz>",
+                    "emoji": "📡",
+                    "details": "Captura y muestra paquetes de red en una interfaz específica."
+                },
+                {
+                    "id": "linux66",
+                    "command": "vmstat",
+                    "emoji": "🖥️",
+                    "details": "Muestra estadísticas del sistema sobre procesos, memoria, paginación y más."
+                },
+                {
+                    "id": "linux67",
+                    "command": "iostat",
+                    "emoji": "📈",
+                    "details": "Muestra estadísticas sobre el uso del CPU y del disco."
+                },
+                {
+                    "id": "linux68",
+                    "command": "dd if=<archivo> of=<dispositivo> bs=<tamaño>",
+                    "emoji": "🔄",
+                    "details": "Copia y convierte archivos y dispositivos."
+                },
+                {
+                    "id": "linux69",
+                    "command": "chroot <directorio>",
+                    "emoji": "🗂️",
+                    "details": "Cambia el directorio raíz del proceso actual a un nuevo directorio."
+                },
+                {
+                    "id": "linux70",
+                    "command": "docker run <imagen>",
+                    "emoji": "🐳",
+                    "details": "Ejecuta un contenedor Docker basado en una imagen."
                 }
             ]
         },
@@ -2134,45 +2134,45 @@
             ]
         },
         {
-                    "section": "Comandos Básicos de Terraform",
-                    "items": [
-                        {
-                            "id": "terraform1",
-                            "command": "terraform --version",
-                            "emoji": "🔢",
-                            "details": "Muestra la versión de Terraform instalada."
-                        },
-                        {
-                            "id": "terraform2",
-                            "command": "terraform init",
-                            "emoji": "🚀",
-                            "details": "Inicializa un directorio de trabajo de Terraform."
-                        },
-                        {
-                            "id": "terraform3",
-                            "command": "terraform plan",
-                            "emoji": "🔍",
-                            "details": "Muestra un plan de ejecución de los cambios."
-                        },
-                        {
-                            "id": "terraform4",
-                            "command": "terraform apply",
-                            "emoji": "▶️",
-                            "details": "Aplica los cambios definidos en los archivos de configuración."
-                        },
-                        {
-                            "id": "terraform5",
-                            "command": "terraform destroy",
-                            "emoji": "🗑️",
-                            "details": "Destruye los recursos creados por Terraform."
-                        },
-                        {
-                            "id": "terraform6",
-                            "command": "terraform validate",
-                            "emoji": "✔️",
-                            "details": "Valida los archivos de configuración de Terraform."
-                        }
-                    ]
+            "section": "Comandos Básicos de Terraform",
+            "items": [
+                {
+                    "id": "terraform1",
+                    "command": "terraform --version",
+                    "emoji": "🔢",
+                    "details": "Muestra la versión de Terraform instalada."
+                },
+                {
+                    "id": "terraform2",
+                    "command": "terraform init",
+                    "emoji": "🚀",
+                    "details": "Inicializa un directorio de trabajo de Terraform."
+                },
+                {
+                    "id": "terraform3",
+                    "command": "terraform plan",
+                    "emoji": "🔍",
+                    "details": "Muestra un plan de ejecución de los cambios."
+                },
+                {
+                    "id": "terraform4",
+                    "command": "terraform apply",
+                    "emoji": "▶️",
+                    "details": "Aplica los cambios definidos en los archivos de configuración."
+                },
+                {
+                    "id": "terraform5",
+                    "command": "terraform destroy",
+                    "emoji": "🗑️",
+                    "details": "Destruye los recursos creados por Terraform."
+                },
+                {
+                    "id": "terraform6",
+                    "command": "terraform validate",
+                    "emoji": "✔️",
+                    "details": "Valida los archivos de configuración de Terraform."
+                }
+            ]
         },
         {
             "section": "Comandos Intermedios de Terraform",
@@ -3105,6 +3105,6 @@
                     "details": "Realiza un análisis de seguridad en las dependencias instaladas."
                 }
             ]
-        }        
+        }
     ]
 }
